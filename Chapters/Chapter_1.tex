@@ -139,30 +139,94 @@ Este último paso es el más costoso, por que en programas grandes, averiguar si
 
 Un archivo de C++ tiene la extención \textit{cpp} a continuación se escribe el siguiente codigo en c++ del archivo 'hola.cpp'
 
-\begin{lstlisting}[textcl=true,style=Cpp, label=hola-mundo, caption=Hola Mundo]
-/* Aqu'i generalmente se suele indicar que se quiere con el programa a hacer */
+\begin{lstlisting}[style=Cpp, label=hola-mundo, caption=Hola Mundo]
+// Aquí generalmente se suele indicar qué se quiere con el programa a hacer
 // Programa que muestra 'Hola mundo' por pantalla y finaliza
- 
-/* Aque se situan todas las librerias que se vayan a usar con #include, que se vera posteriormente */
+
+// Aquí se sitúan todas las librerias que se vayan a usar con include,
+// que se verá posteriormente
 #include <iostream> // Esta libreria permite mostrar y leer datos por consola
- 
- int main()
- {
-   // Este tipo de lineas de codigo que comienzan por '//' son comentarios
-   // El compilador los omite, y sirven para ayudar a otros programadores o 
-   // a uno mismo en caso de volver a revisar el código
-   // Es una práctica sana poner comentarios donde se necesiten,
- 
-   std::cout << "Hola Mundo\n";
- 
- // Mostrar por std::cout el mensaje Hola Mundo y comienza una nueva línea
- 
-   return 0;
- 
- // se devuelve un 0.
-   //que en este caso quiere decir que la salida se ha efectuado con éxito.
- }
- \end{lstlisting}
+
+int main()
+{
+    // Este tipo de líneas de código que comienzan por '//' son comentarios
+    // El compilador los omite, y sirven para ayudar a otros programadores o
+    // a uno mismo en caso de volver a revisar el código
+    // Es una práctica sana poner comentarios donde se necesiten,
+
+    std::cout << "Hola Mundo" << std::endl;
+
+    // Mostrar por std::cout el mensaje Hola Mundo y comienza una nueva línea
+    
+    return 0;
+
+    // se devuelve un 0.
+    //que en este caso quiere decir que la salida se ha efectuado con éxito.
+}
+\end{lstlisting}
+
+Mediante simple inspección, el código parece enorme, pero el compilador lo único que leerá para la creación del programa es lo siguiente:
+\begin{lstlisting}[style=Cpp, label=hola-mundo-compilador, caption=Hola Mundo Comp]
+#include <iostream>
+int main(void){ std::cout << "Hola Mundo" << std::endl; return 0; }
+\end{lstlisting}
+
+Como se puede observar, este código y el original no difieren en mucho salvo en los saltos de línea y que los comentarios, de los que se detallan posteriormente, están omitidos y tan sólo ha quedado "el esqueleto" del código legible para el compilador. Para el compilador, todo lo demás, sobra.
+
+Aquí otro ejemplo
+
+\begin{lstlisting}[style=Cpp, label=hola-mundo-compilador, caption=Hola Mundo Comp]
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hola Mundo" << std::endl;
+    std::cout << "Hello World" << std::endl;
+    std::cout << "Hallo Welt" << std::endl;
+    return 0;
+}
+\end{lstlisting}
+
+Para hacer el código mas corto debemos incluir \textit{using namespace std} con lo que le estamos diciendo al compilador que usaremos el espacio de nombres std por lo que no tendremos que incluirlo cuando usemos elementos de este espacio de nombres, como pueden ser los objetos cout y cin, que representan el flujo de salida estándar (típicamente la pantalla o una ventana de texto) y el flujo de entrada estándar (típicamente el teclado).
+
+Se veria de la siguiente manera:
+
+\begin{lstlisting}[style=Cpp, label=hola-mundo-compilador, caption=Hola Mundo Comp]
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Hola Mundo" << endl;
+    cout << "Hello World" << endl;
+    cout << "Hallo Welt" << endl;
+    return 0;
+}
+\end{lstlisting}
+
+Los pasos siguientes son para una compilación en GNU o sistema operativo Unix, para generar el ejecutable del programa se compila con g++ de la siguiente forma:
+
+\begin{listing}[style=consola, numbers=none,label=some-code,caption=Some Code]
+| g++ hola.cpp -o hola
+\end{listing}
+
+Para poder ver los resultados del programa en acción, se ejecuta el programa de la siguiente forma:
+
+\begin{listing}[style=consola, numbers=none,label=some-code,caption=Some Code]
+|./hola
+\end{listing}
+
+Y a continuación se debe mostrar algo como lo siguiente:
+
+\begin{listing}[style=consola, numbers=none,label=some-code,caption=Some Code]
+Hola Mundo
+\end{listing}
+
+\subsection{Comentarios}\index{Lo mas basico!Comentarios}
+\subsection{Impresión}\index{Lo mas basico!Impresión}
+\subsection{Lectura}\index{Lo mas basico!Lectura}
+\subsection{Lectura}\index{Lo mas basico!Lectura}
 
 \begin{listing}[style=consola, numbers=none,label=some-code,caption=Some Code]
 $ gcc  -o hello hello.c
