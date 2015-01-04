@@ -13,7 +13,23 @@ COlores
 
 Sesiones
 1. Introduccion c++
-2. Estructura de datos (Array, Matriz, Pilas, Colas, Set, etc.)
-3. 
-4. 
+	Variables
+	Estructuras de control
+	Lectura e impresión
+2. Estructura de datos I
+	Contenedores (Array, Matriz, Pilas, Colas, Set, Map, etc...)
+	Cadenas
+3. Programación modular
+	Modularidad
+	Recursividad
+	Bitmask
+	Operaciones con Bits
+4. Matematica y teoria de números
+	Fibonacci
+	Primos
+	GCD, LCM
+	Pow, ModPow
+	Criba y factorización
 5. Algoritmos basicos
+	Ordenamiento de vectores(Quick, Merge, Heap)(Counting, Radix)
+	Busqueda Binaria (Vectores-, Funciones-continuo)

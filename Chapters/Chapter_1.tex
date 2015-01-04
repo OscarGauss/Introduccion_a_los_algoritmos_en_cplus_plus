@@ -106,37 +106,20 @@ También es muy recomendable hacer uso de comentarios (comenta todo lo que pueda
 
 \subsection{Ejemplos}\index{Introducción!Ejemplos}
 
-\begin{lstlisting}[style=C,label=some-code,caption=Some Code]
-#include <stdio.h>
-#include <stdlib.h>
-int main () {
-   int numero;
-   printf ("Ingrese el valor de numero: ");
-   scanf ("%d", &numero);
-   if(numero%2==0)
-       printf ("\n***El numero es par\n");
-   else
-       printf ("\n***El numero es impar\n");
-   return 0;
-}
-///
-#include <stdio.h>
-#define N 10
-/* Block
- * comment */
- 
+\begin{lstlisting}[style=Cpp,label=ejemplo-c++,caption=Ejemplo de C++]
+#include <iostream>
+
+using namespace std;
+
 int main()
 {
-    int i;
- 
-    // Line comment.
-    puts("Hello world!");
- 
-    for (i = 0; i < N; i++)
-    {
-        puts("LaTeX is also great for programmers!");
+    int numero;
+    cin>>numero;
+    if(numero%2==0){
+        cout<<"El numero es par\n";
+    }else{
+        cout<<"EL numero es impar\n";
     }
- 
     return 0;
 }
 \end{lstlisting}
@@ -144,24 +127,43 @@ int main()
 
 \section{Lo mas basico}\index{Lo mas basico}
 
-\begin{lstlisting}[caption=Some Code]
-public void here() {
-    goes().the().code()
-}
-\end{lstlisting}
+\subsection{Proceso de desarrollo de un programa}\index{Lo mas basico!Proceso de desarrollo de un programa}
 
-Escribe el siguiente código en un fichero llamado \texttt{hello.c}:
+Si se desea escribir un programa en C++ se debe ejecutar como mínimo los siguientes pasos:
+\begin{enumerate}
+\item Escribir con un editor de texto plano un programa sintácticamente válido o usar un entorno de desarrollo (IDE) apropiado para tal fin
+\item Compilar el programa y asegurarse de que no han habido errores de compilación
+\item Ejecutar el programa y comprobar que no hay errores de ejecución
+\end{enumerate}
+Este último paso es el más costoso, por que en programas grandes, averiguar si hay o no un fallo prácticamente puede ser una tarea totémica.
+
+Un archivo de C++ tiene la extención \textit{cpp} a continuación se escribe el siguiente codigo en c++ del archivo 'hola.cpp'
+
+\begin{lstlisting}[textcl=true,style=Cpp, label=hola-mundo, caption=Hola Mundo]
+/* Aqu'i generalmente se suele indicar que se quiere con el programa a hacer */
+// Programa que muestra 'Hola mundo' por pantalla y finaliza
  
-\begin{lstlisting}[style=C,label=some-code,caption=Some Code]
-#include <stdio.h>
-int main(int argc, char* argv[]) {
-  puts("Hola mundo!");
-}
-\end{lstlisting}
+/* Aque se situan todas las librerias que se vayan a usar con #include, que se vera posteriormente */
+#include <iostream> // Esta libreria permite mostrar y leer datos por consola
  
-\noindent
-Ahora compila usando \texttt{gcc}:
+ int main()
+ {
+   // Este tipo de lineas de codigo que comienzan por '//' son comentarios
+   // El compilador los omite, y sirven para ayudar a otros programadores o 
+   // a uno mismo en caso de volver a revisar el código
+   // Es una práctica sana poner comentarios donde se necesiten,
  
+   std::cout << "Hola Mundo\n";
+ 
+ // Mostrar por std::cout el mensaje Hola Mundo y comienza una nueva línea
+ 
+   return 0;
+ 
+ // se devuelve un 0.
+   //que en este caso quiere decir que la salida se ha efectuado con éxito.
+ }
+ \end{lstlisting}
+
 \begin{listing}[style=consola, numbers=none,label=some-code,caption=Some Code]
 $ gcc  -o hello hello.c
 \end{listing}
