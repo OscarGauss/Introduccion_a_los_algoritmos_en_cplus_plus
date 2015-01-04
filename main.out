@@ -1,24 +1,15 @@
 \BOOKMARK [0][-]{chapter.1}{Introducci\363n a la programaci\363n en c++}{}% 1
-\BOOKMARK [1][-]{section.1.1}{\277Qu\351 es un Lenguaje de Programaci\363n?}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Historia de C++}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.3}{Qu\351 es C++}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.4}{Herramientas Necesarias}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.5}{Citation}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.6}{Lists}{chapter.1}% 7
-\BOOKMARK [2][-]{subsection.1.6.1}{Numbered List}{section.1.6}% 8
-\BOOKMARK [2][-]{subsection.1.6.2}{Bullet Points}{section.1.6}% 9
-\BOOKMARK [2][-]{subsection.1.6.3}{Descriptions and Definitions}{section.1.6}% 10
-\BOOKMARK [0][-]{chapter.2}{Introducci\363n a la programaci\363n en c++}{}% 11
-\BOOKMARK [1][-]{section.2.1}{\277Qu\351 es un Lenguaje de Programaci\363n?}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.2}{Historia de C++}{chapter.2}% 13
-\BOOKMARK [1][-]{section.2.3}{Qu\351 es C++}{chapter.2}% 14
-\BOOKMARK [1][-]{section.2.4}{Herramientas Necesarias}{chapter.2}% 15
-\BOOKMARK [1][-]{section.2.5}{Citation}{chapter.2}% 16
-\BOOKMARK [1][-]{section.2.6}{Lists}{chapter.2}% 17
-\BOOKMARK [2][-]{subsection.2.6.1}{Numbered List}{section.2.6}% 18
-\BOOKMARK [2][-]{subsection.2.6.2}{Bullet Points}{section.2.6}% 19
-\BOOKMARK [2][-]{subsection.2.6.3}{Descriptions and Definitions}{section.2.6}% 20
-\BOOKMARK [0][-]{chapter*.2}{Bibliography}{}% 21
-\BOOKMARK [1][-]{section*.3}{Books}{chapter*.2}% 22
-\BOOKMARK [1][-]{section*.4}{Articles}{chapter*.2}% 23
-\BOOKMARK [0][-]{section*.5}{Index}{}% 24
+\BOOKMARK [1][-]{section.1.1}{Introducci\363n}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{\277Qu\351 es un Lenguaje de Programaci\363n?}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Historia de C++}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.3}{\277Qu\351 es C++?}{section.1.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.4}{Herramientas Necesarias}{section.1.1}% 6
+\BOOKMARK [2][-]{subsection.1.1.5}{Consejos iniciales antes de programar}{section.1.1}% 7
+\BOOKMARK [2][-]{subsection.1.1.6}{Ejemplos}{section.1.1}% 8
+\BOOKMARK [1][-]{section.1.2}{Lo mas basico}{chapter.1}% 9
+\BOOKMARK [0][-]{chapter.2}{Estructura de datos 1}{}% 10
+\BOOKMARK [0][-]{chapter.3}{Programaci\363n modular}{}% 11
+\BOOKMARK [0][-]{chapter*.2}{Bibliography}{}% 12
+\BOOKMARK [1][-]{section*.3}{Books}{chapter*.2}% 13
+\BOOKMARK [1][-]{section*.4}{Articles}{chapter*.2}% 14
+\BOOKMARK [0][-]{section*.5}{Index}{}% 15

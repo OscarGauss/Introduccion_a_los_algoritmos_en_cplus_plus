@@ -46,7 +46,15 @@
 \usepackage[top=3cm,bottom=3cm,left=3.2cm,right=3.2cm,headsep=10pt,paperwidth=8.5in,paperheight=11in]{geometry} % Page margins
 
 \usepackage{xcolor} % Required for specifying colors by name
+
 \definecolor{mycolor}{RGB}{24,97,243} % Define the orange color used for highlighting throughout the book
+\usepackage{color}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{greencodeblocks}{RGB}{0,160,0}
+\definecolor{graycodeblocks}{RGB}{160,160,160}
+\definecolor{bluecodeblocks}{RGB}{0,0,255}
 
 % Font Settings
 \usepackage{avant} % Use the Avantgarde font for headings
@@ -56,6 +64,96 @@
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
 \usepackage[utf8]{inputenc} % Required for including letters with accents
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{listings} % Para estrofas de codigo
+%%%%%%%%%%%%%%%Personalizacion del listings
+
+
+
+%%Otra configuracion 
+%\lstdefinestyle{customc}{
+%  belowcaptionskip=1\baselineskip,
+%  breaklines=true,
+%  frame=L,
+%  xleftmargin=\parindent,
+%  language=C,
+%  showstringspaces=false,
+%  basicstyle=\footnotesize\ttfamily,
+%  keywordstyle=\bfseries\color{green!40!black}\textbf,
+%  commentstyle=\itshape\color{purple!40!black},
+%  identifierstyle=\color{blue},
+%  stringstyle=\color{orange},
+%}
+%\lstdefinestyle{customcpp}{
+%  belowcaptionskip=1\baselineskip,
+%  breaklines=true,
+%  %frame=L,
+%  %xleftmargin=\parindent,
+%  language=C,
+%  showstringspaces=false,
+%  basicstyle=\footnotesize\ttfamily,
+%  keywordstyle=\bfseries\color{green!40!black},
+%  commentstyle=\itshape\color{graycodeblocks},
+%  identifierstyle=\color{blue},
+%  stringstyle=\color{orange},
+%}
+
+\usepackage{caption}
+%\DeclareCaptionFont{white}{\color{black}}
+%\DeclareCaptionFormat{listing}{%%%%
+  %\parbox{\textwidth}{\colorbox{white}{\parbox{\textwidth}{#1#2#3}}\vskip-4pt}}
+%\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+%\lstset{frame=lrb,xleftmargin=\fboxsep,xrightmargin=-\fboxsep}
+
+
+%\lstset{escapechar=@,style=customc, frame=lrb,xleftmargin=\fboxsep,xrightmargin=-\fboxsep}%%% Para la habilitar la segunda config comentar si no.
+%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%5
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+ 
+\usepackage{listings}
+\lstset{ frame=Ltb,
+     framerule=0pt,
+     aboveskip=0.5cm,
+     framextopmargin=3pt,
+     framexbottommargin=3pt,
+     framexleftmargin=0.4cm,
+     framesep=0pt,
+     rulesep=.4pt,
+     backgroundcolor=\color{mycolor!5},
+     rulesepcolor=\color{black},
+     %
+     stringstyle=\ttfamily,
+     showstringspaces = false,
+     basicstyle=\small\ttfamily,
+     commentstyle=\color{graycodeblocks},
+     keywordstyle=\bfseries\color{greencodeblocks},
+     %identifierstyle=\color{blue},
+     stringstyle=\color{bluecodeblocks},
+     %
+     numbers=left,
+     numbersep=15pt,
+     numberstyle=\small\color{mycolor},
+     numberfirstline = false,
+     breaklines=true,
+   }
+ 
+% minimizar fragmentado de listados
+\lstnewenvironment{listing}[1][]
+   {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
+ 
+\lstdefinestyle{consola}
+   {basicstyle=\scriptsize\bf\ttfamily,
+    backgroundcolor=\color{gray75},
+   }
+ 
+\lstdefinestyle{C}
+   {language=C,
+   }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
 % Bibliography
 \usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
@@ -71,8 +169,15 @@
 
 \input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
 
+%Cambiando al español :p o a lo que queres
+\renewcommand{\chaptername}{Lecture}
+%\renewcommand*\contentsname{Contenidos} %Para cambiar el nombre por defecto'Contents' por Contenidos aqui por alguna razon no cambia esta en content
+\renewcommand*{\lstlistingname}{Codigo}
+\renewcommand*{\lstlistlistingname}{Lista de \lstlistingname s} 
+
 \begin{document}
 
+\renewcommand{\chaptername}{Capítulo}% Para cambiar el nombre por defecto'Chapter' por Capitulo
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -83,9 +188,9 @@
 \centering
 \vspace*{9cm}
 \par\normalfont\fontsize{35}{35}\sffamily\selectfont
-The Search for a Title\par % Book title
+Introducción a los algoritmos en c++\par % Book title
 \vspace*{1cm}
-{\Huge Dr. John Smith}\par % Author name
+{\Huge OscarGauss :P}\par % Author name
 \endgroup
 
 %----------------------------------------------------------------------------------------
@@ -148,5 +253,7 @@ The Search for a Title\par % Book title
 \printindex
 
 %----------------------------------------------------------------------------------------
+
+\lstlistoflistings
 
 \end{document}

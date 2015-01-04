@@ -5,8 +5,10 @@
 %\chapterimage{chapter_head_1.pdf} % Chapter heading image
 
 \chapter{Introducción a la programación en c++}
+\renewcommand{\chaptername}{Lecture}
+\section{Introducción}\index{Introducción}
 
-\section{¿Qué es un Lenguaje de Programación?}\index{¿Qué es un Lenguaje de Programación?}
+\subsection{¿Qué es un Lenguaje de Programación?}\index{Introducción!¿Qué es un Lenguaje de Programación?}
 
 Antes de hablar de C++, es necesario explicar que un lenguaje de programación es una herramienta que nos permite comunicarnos e instruir a la computadora para que realice una tarea específica. Cada lenguaje de programación posee una sintaxis y un léxico particular, es decir, forma de escribirse que es diferente en cada uno por la forma que fue creado y por la forma que trabaja su compilador para revisar, acomodar y reservar el mismo programa en memoria.
 
@@ -24,10 +26,9 @@ Existen muchos lenguajes de programación de entre los que se destacan los sigui
 \item Smalltalk
 \end{itemize}
 
+\subsection{Historia de C++}\index{Introducción!Historia de C++}
 
-\section{Historia de C++}\index{Historia de C++}
-
-C++ es un lenguaje de programación creado por Bjarne Stroustrup en los laboratorios de At&T en 1983. Stroustrup tomó como base el lenguaje de programación más popular en aquella época el cual era C.
+C++ es un lenguaje de programación creado por Bjarne Stroustrup en los laboratorios de At\&T en 1983. Stroustrup tomó como base el lenguaje de programación más popular en aquella época el cual era C.
 
 El C++ es un derivado del mítico lenguaje C, el cual fue creado en la década de los 70 por la mano del finado Dennis Ritchie para la programación del sistema operativo (un sistema parecido a Unix es GNU/Linux), el cual surgió como un lenguaje orientado a la programación de sistemas (System Programming) y de herramientas (Utilities) recomendado sobre todo para programadores expertos, y que no llevaba implementadas muchas funciones que hacen a un lenguaje más comprensible.
 
@@ -39,8 +40,7 @@ C++ pretende llevar a C a un nuevo paradigma de clases y objetos con los que se 
 
 Se dice que nuestro cerebro trabaja de forma relacional (relacionando hechos), es por ello que cada vez que recuerdas algo, (cuentas un hecho), termina siendo diferente (se agregan u omiten partes).
 
-
-\section{Qué es C++}\index{Qué es C++}
+\subsection{¿Qué es C++?}\index{Introducción!¿Qué es C++?}
 
 C++ es un lenguaje de programación orientado a objetos que toma la base del lenguaje C y le agrega la capacidad de abstraer tipos como en Smalltalk.
 
@@ -48,8 +48,7 @@ La intención de su creación fue el extender al exitoso lenguaje de programaci�
 
 Posteriormente se añadieron facilidades de programación genérica, que se sumó a los otros dos paradigmas que ya estaban admitidos (programación estructurada y la programación orientada a objetos). Por esto se suele decir que el C++ es un lenguaje de programación multiparadigma.
 
-
-\section{Herramientas Necesarias}\index{Herramientas Necesarias}
+\subsection{Herramientas Necesarias}\index{Introducción!Herramientas Necesarias}
 
 Las principales herramientas necesarias para escribir un programa en C++ son las siguientes:
 
@@ -84,39 +83,85 @@ Las principales herramientas necesarias para escribir un programa en C++ son las
 		\begin{itemize}
 		\item Xcode (con el compilador trae una IDE para poder programar)
 		\end{itemize}
+	\end{itemize}
 \item Tiempo para practicar
 \item Paciencia
 \end{enumerate}
-\section{Citation}\index{Citation}
 
-This statement requires citation \cite{book_key}; this one is more specific \cite[122]{article_key}.
-
-%------------------------------------------------
-
-\section{Lists}\index{Lists}
-
-Lists are useful to present information in a concise and/or ordered way\footnote{Footnote example...}.
-
-\subsection{Numbered List}\index{Lists!Numbered List}
-
-\begin{enumerate}
-\item The first item
-\item The second item
-\item The third item
-\end{enumerate}
-
-\subsection{Bullet Points}\index{Lists!Bullet Points}
-
+\textbf{Adicional}
 \begin{itemize}
-\item The first item
-\item The second item
-\item The third item
+\item Inglés (Recomendado)
+\item Estar familiarizado con C u otro lenguaje derivado (PHP, Python, etc).
 \end{itemize}
 
-\subsection{Descriptions and Definitions}\index{Lists!Descriptions and Definitions}
+Es recomendable tener conocimientos de C, debido a que C++ es una mejora de C, tener los conocimientos sobre este te permitira avanzar mas rapido y comprender aun mas. Tambien, hay que recordar que C++, admite C, por lo que se puede programar (reutilizar), funciones de C que se puedan usar en C++.
 
-\begin{description}
-\item[Name] Description
-\item[Word] Definition
-\item[Comment] Elaboration
-\end{description}
+Aunque No es obligacion aprender C, es recomendable tener nociones sobre la programación orientada a objetos en el caso de no tener conocimientos previos de programación estructurada. Asimismo, muchos programadores recomiendan no saber C para saber C++, por ser el primero de ellos un lenguaje imperativo o procedimental y el segundo un lenguaje de programación orientado a objetos.
+
+\subsection{Consejos iniciales antes de programar}\index{Introducción!Consejos iniciales antes de programar}
+
+Con la práctica, se puede observar que se puede confundir a otros programadores con el código que se haga. Antes de siquiera hacer una línea de código, si se trabaja con otros programadores, ha de tenerse en cuenta que todos deben escribir de una forma similar el código, para que de forma global puedan corregir el código en el caso de que hubieran errores o rastrearlos en el caso de haberlos.
+
+También es muy recomendable hacer uso de comentarios (comenta todo lo que puedas, hay veces que lo que parece obvio para ti, no lo es para los demás) y tratar de hacer un código limpio y comprensible, especificando detalles y haciendo tabulaciones, aunque te tome un poco mas de tiempo, es posible que mas adelante lo agradezcas tu mismo.
+
+\subsection{Ejemplos}\index{Introducción!Ejemplos}
+
+\begin{lstlisting}[style=C,label=some-code,caption=Some Code]
+#include <stdio.h>
+#include <stdlib.h>
+int main () {
+   int numero;
+   printf ("Ingrese el valor de numero: ");
+   scanf ("%d", &numero);
+   if(numero%2==0)
+       printf ("\n***El numero es par\n");
+   else
+       printf ("\n***El numero es impar\n");
+   return 0;
+}
+///
+#include <stdio.h>
+#define N 10
+/* Block
+ * comment */
+ 
+int main()
+{
+    int i;
+ 
+    // Line comment.
+    puts("Hello world!");
+ 
+    for (i = 0; i < N; i++)
+    {
+        puts("LaTeX is also great for programmers!");
+    }
+ 
+    return 0;
+}
+\end{lstlisting}
+
+
+\section{Lo mas basico}\index{Lo mas basico}
+
+\begin{lstlisting}[caption=Some Code]
+public void here() {
+    goes().the().code()
+}
+\end{lstlisting}
+
+Escribe el siguiente código en un fichero llamado \texttt{hello.c}:
+ 
+\begin{lstlisting}[style=C,label=some-code,caption=Some Code]
+#include <stdio.h>
+int main(int argc, char* argv[]) {
+  puts("Hola mundo!");
+}
+\end{lstlisting}
+ 
+\noindent
+Ahora compila usando \texttt{gcc}:
+ 
+\begin{listing}[style=consola, numbers=none,label=some-code,caption=Some Code]
+$ gcc  -o hello hello.c
+\end{listing}
