@@ -6,6 +6,7 @@
 
 \chapter{Introducción a la programación en c++}
 \renewcommand{\chaptername}{Lecture}
+\setlength{\parindent}{0pt}
 \section{Introducción}\index{Introducción}
 
 \subsection{¿Qué es un Lenguaje de Programación?}\index{Introducción!¿Qué es un Lenguaje de Programación?}
@@ -166,7 +167,8 @@ int main()
 \end{lstlisting}
 
 Mediante simple inspección, el código parece enorme, pero el compilador lo único que leerá para la creación del programa es lo siguiente:
-\begin{lstlisting}[style=Cpp, label=hola-mundo-compilador, caption=Hola Mundo Comp]
+
+\begin{lstlisting}[style=Cpp, label=hola-mundo-compilador, caption=Hola Mundo Compilado]
 #include <iostream>
 int main(void){ std::cout << "Hola Mundo" << std::endl; return 0; }
 \end{lstlisting}
@@ -175,7 +177,7 @@ Como se puede observar, este código y el original no difieren en mucho salvo en
 
 Aquí otro ejemplo
 
-\begin{lstlisting}[style=Cpp, label=hola-mundo-compilador, caption=Hola Mundo Comp]
+\begin{lstlisting}[style=Cpp, label=hello-world, caption=Hello World]
 #include <iostream>
 
 int main()
@@ -191,7 +193,7 @@ Para hacer el código mas corto debemos incluir \textit{using namespace std} con
 
 Se veria de la siguiente manera:
 
-\begin{lstlisting}[style=Cpp, label=hola-mundo-compilador, caption=Hola Mundo Comp]
+\begin{lstlisting}[style=Cpp, label=using-namespace-std, caption=Using Namespace Std]
 #include <iostream>
 
 using namespace std;
@@ -207,27 +209,181 @@ int main()
 
 Los pasos siguientes son para una compilación en GNU o sistema operativo Unix, para generar el ejecutable del programa se compila con g++ de la siguiente forma:
 
-\begin{listing}[style=consola, numbers=none,label=some-code,caption=Some Code]
+\begin{listing}[style=consola, numbers=none,label=compilar,caption=Compilar]
 | g++ hola.cpp -o hola
 \end{listing}
 
 Para poder ver los resultados del programa en acción, se ejecuta el programa de la siguiente forma:
 
-\begin{listing}[style=consola, numbers=none,label=some-code,caption=Some Code]
+\begin{listing}[style=consola, numbers=none,label=ejecutar,caption=Ejecutar]
 |./hola
 \end{listing}
 
 Y a continuación se debe mostrar algo como lo siguiente:
 
-\begin{listing}[style=consola, numbers=none,label=some-code,caption=Some Code]
+\begin{listing}[style=consola, numbers=none,label=resultado,caption=Resultado]
 Hola Mundo
 \end{listing}
 
-\subsection{Comentarios}\index{Lo mas basico!Comentarios}
-\subsection{Impresión}\index{Lo mas basico!Impresión}
-\subsection{Lectura}\index{Lo mas basico!Lectura}
-\subsection{Lectura}\index{Lo mas basico!Lectura}
 
-\begin{listing}[style=consola, numbers=none,label=some-code,caption=Some Code]
-$ gcc  -o hello hello.c
+\subsection{Sintaxis}\index{Lo mas basico!Sintaxis}
+
+Sintaxis es la forma correcta en que se deben escribir las instrucciones para el computador en un lenguaje de programación específico. C++ hereda la sintaxis de C estándar, es decir, la mayoría de programas escritos para el C estándar pueden ser compilados en C++.
+
+\textbf{El punto y coma}
+El punto y coma es uno de los simbólos más usados en C, C++; y se usa con el fin de indicar el final de una línea de instrucción. El punto y coma es de uso obligatorio.
+
+\textbf{Ejemplo}
+
+\begin{lstlisting}[style=Cpp, label=sintaxis, caption=Sintaxis]
+clrscr(); //Limpiar pantalla, funciona con la librería conio de Borland C++
+x = a + b;
+ 
+string IP = "127.0.0.1"; // Variable IP tipo string
+cout << IP << endl; // Devuelve 127.0.0.1
+ 
+char Saludo[5] = "Hola"; // Variable Saludo tipo char
+cout << Saludo[0] << endl; // Igual a H
+cout << Saludo[1] << endl; // Igual a o
+cout << Saludo[2] << endl; // Igual a l
+cout << Saludo[3] << endl; // Igual a a
+\end{lstlisting}
+
+El punto y coma se usa también para separar contadores, condicionales e incrementadores dentro de un sentencia for
+
+\textbf{Ejemplo}
+
+\begin{lstlisting}[style=Cpp, label=sintaxis, caption=Sintaxis]
+for (i=0; i < 10; i++) cout << i;
+\end{lstlisting}
+
+\textbf{Espacios y tabuladores}
+Usar caracteres extras de espaciado o tabuladores ( caracteres tab ) es un mecanismo que nos permite ordenar de manera más clara el código del programa que estemos escribiendo, sin embargo, el uso de estos es opcional ya que el compilador ignora la presencia de los mismos. Por ejemplo, el segundo de los ejemplos anteriores se podría escribir como:
+
+\begin{lstlisting}[style=Cpp, label=sintaxis, caption=Sintaxis]
+for (int i=0; i < 10; i++) { cout << i * x; x++; }
+\end{lstlisting}
+
+y el compilador no pondría ningún reparo.
+
+
+\subsection{Comentarios}\index{Lo mas basico!Comentarios}
+
+Existen dos modos basicos para comentar en c++:
+\begin{description}
+\item [//] \hfill \\
+Comentan solo una linea de código 
+\item [/*Comentario*/] \hfill \\
+Comentan estrofas de código
+\end{description}
+
+A continuación un ejemplo:
+
+\begin{lstlisting}[style=Cpp, label=comentarios, caption=Comentarios]
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    /*
+    cout    es para imprimir
+    <<      se utiliza para separar elementos para cout
+    endl    es un salto de linea
+    */
+
+    //En español
+    cout << "Hola Mundo" << endl;
+    //En ingles
+    cout << "Hello World" << endl;
+    //En aleman
+    cout << "Hallo Welt" << endl;
+    return 0;
+}
+\end{lstlisting}
+
+
+\subsection{Impresión}\index{Lo mas basico!Impresión}
+
+Para la impresión se utilliza \textit{cout} de la siguiente manera:
+
+\begin{lstlisting}[style=Cpp, label=impresión, caption=Impresión]
+// Programa que muestra diversos textos por consola
+
+// Las librerías del sistema usadas son las siguientes
+#include <iostream>
+
+using namespace std;
+// Es la función principal encargada de mostrar por consola diferentes textos
+int main(void)
+{
+    // Ejemplo con una única línea, se muestra el uso de cout y endl
+    cout << "Bienvenido. Soy un programa. Estoy en una linea de codigo." << endl;
+
+    // Ejemplo con una única línea de código que se puede fraccionar
+    // mediante el uso de '<<'
+    cout << "Ahora "
+         << "estoy fraccionado en el codigo, pero en la consola me muestro como una unica frase."
+         << endl;
+
+    // Uso de un código largo, que cuesta leer para un programador,
+    // y que se ejecutará sin problemas.
+    // *** No se recomienda hacer líneas de esta manera,
+    // esta forma de programar no es apropiada ***
+    cout << "Un gran texto puede ocupar muchas lineas."
+         << endl
+         << "Pero eso no frena al programador a que todo se pueda poner en una unica linea de codigo y que"
+         << endl
+         << "el programa, al ejecutarse, lo situe como el programador quiso"
+         << endl;
+
+    return 0; // Y se termina con éxito.
+}
+\end{lstlisting}
+
+Consola:
+
+\begin{listing}[style=consola, numbers=none,label=resultado-impresión,caption=Resultado Impresión]
+Bienvenido. Soy un programa. Estoy en una linea de codigo.
+Ahora estoy fraccionado en el codigo, pero en la consola me muestro como una unica frase.
+Un gran texto puede ocupar muchas lineas.
+Pero eso no frena al programador a que todo se pueda poner en una unica linea de codigo y que
+el programa, al ejecutarse, lo situe como el programador quiso
+
 \end{listing}
+
+\subsection{Datos primitivos}\index{Lo mas basico!Datos primitivos}
+
+En un lenguaje de programación es indispensable poder almacenar información, para esto en C++ están disponibles los siguientes tipos que permiten almacenar información numérica de tipo entero o real:
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		Nombre & Descripción & Tamaño & Rango de valores\\
+		\hline
+		bool & Valor booleano, puede tomar dos valores(verdadero o falso) & 1byte & true o false\\
+		\hline
+		char & Carácter o entero pequeño & 1byte & Con signo: -128 a 127 Sin signo: 0 a 255\\
+		\hline
+		short int & Entero corto & 2bytes & Con signo: -32768 a 32767 Sin signo: 0 a 65535\\
+		\hline
+		int & Entero & 4bytes & Con signo: -2147483648 a 2147483647 Sin signo: 0 a 4294967295\\
+		\hline
+		long long & Entero largo & 8bytes & Con signo: -9223372036854775808 a 9223372036854775807 Sin signo: 0 a 18,446,744,073,709,551,615\\
+		\hline
+		float & Número de punto flotante & 4bytes & 3.4e +/- 38 (7 digitos)\\
+		\hline
+		double & De punto flotante de doble precisión & 8bytes & 1.7e +/- 308 (15 digitos)\\
+		\hline
+	\end{tabular}
+\end{center}
+
+
+
+
+\subsection{Variables}\index{Lo mas basico!Variables}
+
+
+
+
+\subsection{Lectura}\index{Lo mas basico!Lectura}
