@@ -3,3 +3,130 @@
 %----------------------------------------------------------------------------------------
 
 \chapter{Programación modular}
+\renewcommand{\chaptername}{Lecture}
+\section{Introduccion}\index{Introduccion}
+
+\subsection{¿Qué es la Programación Modular?}\index{Introduccion!¿Qué es la Programación Modular?}
+
+
+La programacion modular es un paradigma (modelo) de programacion, que consiste en dividir un problema en subproblemas con el fin de simplificarlo.
+
+Aplicando la Programacion Modular podemos llevar problemas grandes y tediosos, a pequeños subproblemas, y estos a su ves en otros, hasta poder resolverlos facilmente con un lenguaje de programacion, a esta tecnica la llamaremos divide y venceras.
+
+Un modulo es cada una de las partes del programa que resuelve un subproblema en las que se dividio el problema original.
+
+\section{Modulos}\index{Modulos}
+
+\subsection{Concepto de Modulo}\index{Modulos!Concepto de Modulo}
+
+Un Modulo es una segmento de codigo separado del bloque principal que puede ser invocado en cualquier momento desde este o desde otro modulo.
+
+\subsection{Elementos de declaracion del Modulo}\index{Modulos!Elementos de declaracion del Modulo}
+
+Un Moduo o subrutina se declara, generalmente, por:
+\begin{itemize}
+\item Un nombre unico con el que se lo identifica y distingue de otros.
+\item Un tipo de dato de retorno.
+\item Una lista de parametros, puede ser cero, uno o varios.
+\item Conjunto de ordenes que debe ejecutar la subrutina.
+\end{itemize}
+
+\subsection{Ejemplos}\index{Modulos!Ejemplos}
+
+El siguiente ejemplo muestra una subrutina que tiene un parametro de entrada (x) del cual calcula su factorial y lo devuelve como parametro de salida.
+
+El factorial de un numero n se define como el producto de todos los numeros desde 1 hasta n, y se simboliza n!. 
+\[
+5!=1x2x3x4x5=120
+\]
+
+\begin{lstlisting}[textcl=true,style=Cpp, label=fact, caption=Factorial]
+#include <iostream>  
+using namespace std;
+//"int" Tipo de dato de retorno.
+//"fact" Nombre de la subrutina.
+//"(int x)" Paranetros que recibe.
+int fact(int x){
+	//Ordenes que ejecuta
+	int f=1
+	for(int i=1; i<=x;i++)
+		f=f*i;
+	return f;
+}
+int main(){
+	int n;
+	cin>>n;
+	cout<<fact(n)<<endl;
+	return 0;
+}
+\end{lstlisting}
+
+\section{Recursividad}\index{Recursividad}
+
+\subsection{Que es recursvidad?}\index{Recursividad!Que es recursividad?}
+
+La recursividad es una tecnica de programacion en la que un Modulo hace una llamada a si mismo con el fin de resolver el problema. La llamada a si mismo se conoce como llamada recursiva.
+
+Dicho formalmente, un algoritmo se dice recursivo si calcula instancias de un problema en función de otras instancias del mismo problema hasta llegar a un caso base, que suele ser una instancia pequeña del problema, cuya respuesta generalmente está dada en el algoritmo y no es necesario calcularla.
+
+Aun asi la definicion puede ser confusa, por eso ahora presentaremos 2 ejemplos que ilustran la recursividad:
+
+\subsection{Ejemplos}\index{Recursividad!Ejemplos}
+\begin{itemize}
+\item Al igual que en el primer ejemplo tendremos una subrutina o funcion que calcule el factorial de un numero, en este caso lo hara de manera recursiva.
+
+\begin{lstlisting}[textcl=true,style=Cpp, label=factrec, caption=Factorial Recursivo]
+#include <iostream>  
+using namespace std;
+
+int fact(int n){
+	/*
+	Caso base: donde el algoritmo se detendra por que tendra
+	un valor conocido y no necesitara calcularlo pues 1!=1
+	*/
+	if(n==1) return 1;
+	/*
+	Si el valor es diferente de 1, entonces es un valor que 
+	necesitamos calcular, por la definicion de factorial
+	podemos apreciar que, por ejemplo: 5!=5x4! y que a su 
+	vez 4!=4*3! y asi sucesivamente, esto es recursividad 
+	ya que esta funcion se llama asi misma para calcular el
+	siguiente factorial.
+	*/
+	return n*fact(n-1);
+}
+int main(){
+	int n;
+	cin>>n;
+	cout<<fact(n)<<endl;
+	return 0;
+}
+\end{lstlisting}
+
+\item Ahora calcularemos el n-simo termino de la sucesion Fibonacci por medio de un algoritmo recursivo.
+
+La sucecion Fibonacci, comienza con los valores 1 y 1 y a partir de estos cada termino es la suma de los 2 anteriores:
+\[
+1,1,2,3,5,8,13,21,34,...
+\]
+
+\begin{lstlisting}[textcl=true,style=Cpp, label=fibo, caption=Sucesion Fibonacci]
+#include <iostream>  
+using namespace std;
+
+int Fibo(int n){
+	//Caso base: El primer y segundo termino de la sucesion
+	//son 1.
+	if(n==1 or n==2) return 1;
+	//Por la definicion de la sucecion un termino es igual a 
+	//la suma de los 2 terminos anteriores.
+	return Fibo(n-1)+Fibo(n-2);
+}
+int main(){
+	int n;
+	cin>>n;
+	cout<<Fibo(n)<<endl;
+	return 0;
+}
+\end{lstlisting}
+\end{itemize}
