@@ -4,6 +4,7 @@
 
 \chapter{Programación modular}
 \renewcommand{\chaptername}{Lecture}
+\setlength{\parindent}{0pt}
 \section{Introduccion}\index{Introduccion}
 
 \subsection{¿Qué es la Programación Modular?}\index{Introduccion!¿Qué es la Programación Modular?}
@@ -40,7 +41,7 @@ El factorial de un numero n se define como el producto de todos los numeros desd
 5!=1x2x3x4x5=120
 \]
 
-\begin{lstlisting}[textcl=true,style=Cpp, label=fact, caption=Factorial]
+\begin{lstlisting}[style=Cpp, label=fact, caption=Factorial]
 #include <iostream>  
 using namespace std;
 //"int" Tipo de dato de retorno.
@@ -75,7 +76,7 @@ Aun asi la definicion puede ser confusa, por eso ahora presentaremos 2 ejemplos 
 \begin{itemize}
 \item Al igual que en el primer ejemplo tendremos una subrutina o funcion que calcule el factorial de un numero, en este caso lo hara de manera recursiva.
 
-\begin{lstlisting}[textcl=true,style=Cpp, label=factrec, caption=Factorial Recursivo]
+\begin{lstlisting}[style=Cpp, label=factrec, caption=Factorial Recursivo]
 #include <iostream>  
 using namespace std;
 
@@ -110,7 +111,7 @@ La sucecion Fibonacci, comienza con los valores 1 y 1 y a partir de estos cada t
 1,1,2,3,5,8,13,21,34,...
 \]
 
-\begin{lstlisting}[textcl=true,style=Cpp, label=fibo, caption=Sucesion Fibonacci]
+\begin{lstlisting}[style=Cpp, label=fibo, caption=Sucesion Fibonacci]
 #include <iostream>  
 using namespace std;
 
@@ -130,5 +131,3 @@ int main(){
 }
 \end{lstlisting}
 \end{itemize}
-
-

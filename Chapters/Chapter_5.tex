@@ -1,0 +1,166 @@
+%----------------------------------------------------------------------------------------
+%	CHAPTER 5
+%----------------------------------------------------------------------------------------
+
+\chapter{Algoritmos Basicos}
+\renewcommand{\chaptername}{Lecture}
+\setlength{\parindent}{0pt}
+\section{Algoritmos de Ordenanmiento}\index{Algoritmos de Ordenanmiento}
+\subsection{Ordenamiento Rapido}\index{Algoritmos de Ordenamiento!Ordenamiento Rapido}
+
+El ordenamiento rapido (Quicksort en ingles) es un algortimo basado en la tecnica divide y venceras, que permite ordenar n elementos en un tiempo proporcional a $ n \log (n) $
+
+\subsubsection{Descripcion del Algoritomo}\index{Algoritmos de Ordenamiento!Quicksort!Descripcion del Algoritmo}
+
+El algoritmo trabaja de la siguiente forma:
+
+\begin{itemize}
+\item Elegir un elemento del vector a ordenar, al que llamaremos pivote.
+
+\item Mover todos los elementos menores que el pivote a un lado y los mayores al otro lado.
+
+\item El vector queda separado en 2 subvectores una con los elementos a la izquierda del pivote y otra con los de la derecha,
+
+\item Repetir este proceso recursivamente en las sublistas hasta que estas tengan un solo elemento.
+\end{itemize}
+
+\subsubsection{Codigo en C++}\index{Algoritmos de Ordenamiento!Quicksort!Codigo}
+
+\begin{lstlisting}[style=Cpp, label=QuickSort, caption=QuickSort]
+#include <iostream>
+using namespace std;
+int pivot(int a[], int first, int last) {
+    int  p = first;
+    int pivotElement = a[first];
+ 
+    for(int i = first+1 ; i <= last ; i++) {
+        if(a[i] <= pivotElement){
+            p++;
+            swap(a[i], a[p]);
+        }
+    }
+ 
+    swap(a[p], a[first]);
+ 
+    return p;
+}
+void quickSort( int a[], int first, int last ) {
+    int pivotElement;
+ 
+    if(first < last){
+        pivotElement = pivot(a, first, last);
+        quickSort(a, first, pivotElement-1);
+        quickSort(a, pivotElement+1, last);
+    }
+}
+void swap(int& a, int& b){
+    int temp = a;
+    a = b;
+    b = temp;
+}
+\end{lstlisting}
+
+\subsection{Ordenamiento por mezcla}\index{Algoritmos de Ordenamiento!Ordenamiento por mezcla}
+
+El algoritmo de ordenamiento por mezcla (Merge Sort) es un algoritmo de ordenacion externo estable basado en la tecnica divide y venceras. Su complejidad es $ O(n \log n) $
+
+\subsubsection{Descripcion del Algoritomo}\index{Algoritmos de Ordenacion!Ordenamiento por mezcla!Descripcion del Algoritmo}
+
+Conceptualmente el algoritmo funciona de la siguiente manera:
+
+\begin{itemize}
+\item Si la longitud del vector es 1 o 0, entonces ya esta ordenado, en otro caso:
+
+\item Dividir el vector desordenado en dos subvectores de aproximadamente la mitad de tamaño.
+
+\item Ordenar cada subvector recursivamente aplicando el ordenamiento por mezcla.
+
+\item Mezclar los dos subvectores en un solo subvector ordenado.
+
+\end{itemize}
+
+\subsubsection{Codigo en C++}\index{Algoritmos de Ordenacion!Ordenamiento por mezcla!Codigo en C++}
+\begin{lstlisting}[style=Cpp, label=MergeSort, caption=Merge Sort]
+#include <bits/stdc++.h>
+using namespace std;
+
+void mergeSort(int list[], int lowerBound, int upperBound){
+    int mid;
+
+    if (upperBound > lowerBound){
+        mid = ( lowerBound + upperBound) / 2;
+        mergeSort(list, lowerBound, mid);
+        mergeSort(list, mid + 1, upperBound);
+        merge(list, lowerBound, upperBound, mid);
+    }
+}
+void merge(int list[], int lowerBound, int upperBound, int mid){
+    int* leftArray = NULL;
+    int* rightArray = NULL;
+    int i, j, k;
+    int n1 = mid - lowerBound + 1;
+    int n2 = upperBound - mid;
+    leftArray = new int[n1];
+    rightArray = new int[n2];
+    for (i = 0; i < n1; i++)
+        leftArray[i] = list[lowerBound + i];
+    for (j = 0; j < n2; j++)
+        rightArray[j] = list[mid + 1 + j];
+
+    i = 0;
+    j = 0;
+    k = lowerBound;
+
+    while (i < n1 && j < n2){
+        if (leftArray[i] <= rightArray[j]){
+            list[k] = leftArray[i];
+            i++;
+        }
+        else{
+            list[k] = rightArray[j];
+            j++;
+        }
+
+        k++;
+    }
+    while (i < n1){
+        list[k] = leftArray[i];
+        i++;
+        k++;
+    }
+    while (j < n2){
+        list[k] = rightArray[j];
+        j++;
+        k++;
+    }
+    delete [] leftArray;
+    delete [] rightArray;
+}
+\end{lstlisting}
+
+\subsection{Ordenamiento por Monticulos}\index{Algoritmos de Ordenacion!Ordenamiento por Monticulos}
+
+\subsubsection{Descripcion del Algoritmo}\index{Algoritmos de Ordenacion!Ordenamiento por Monticulos!Descripcion del Algortimo}
+
+Es un algoritmo de ordenacion no recursivo, con complejidad $ O(n \log n) $
+
+Este algoritmo consiste en almacenar todos los elementos del vector a ordenar en un montículo (heap), y luego extraer el nodo que queda como nodo raíz del montículo (cima) en sucesivas iteraciones obteniendo el conjunto ordenado. Basa su funcionamiento en una propiedad de los montículos, por la cual, la cima contiene siempre el menor elemento (o el mayor, según se haya definido el montículo) de todos los almacenados en él. El algoritmo, después de cada extracción, recoloca en el nodo raíz o cima, la última hoja por la derecha del último nivel. Lo cual destruye la propiedad heap del árbol. Pero, a continuación realiza un proceso de "descenso" del número insertado de forma que se elige a cada movimiento el mayor de sus dos hijos, con el que se intercambia. Este intercambio, realizado sucesivamente "hunde" el nodo en el árbol restaurando la propiedad montículo del arbol y dejándo paso a la siguiente extracción del nodo raíz.
+
+El algoritmo, en su implementación habitual, tiene dos fases. Primero una fase de construcción de un montículo a partir del conjunto de elmentos de entrada, y después, una fase de extracción sucesiva de la cima del montículo. La implementación del almacén de datos en el heap, pese a ser conceptualmente un árbol, puede realizarse en un vector de forma fácil. Cada nodo tiene dos hijos y por tanto, un nodo situado en la posición i del vector, tendrá a sus hijos en las posiciones 2 x i, y 2 x i +1 suponiendo que el primer elemento del vector tiene un índice = 1. Es decir, la cima ocupa la posición inicial del vector y sus dos hijos la posición segunda y tercera, y así, sucesivamente. Por tanto, en la fase de ordenación, el intercambio ocurre entre el primer elemento del vector (la raíz o cima del árbol, que es el mayor elemento del mismo) y el último elemento del vector que es la hoja más a la derecha en el último nivel. El árbol pierde una hoja y por tanto reduce su tamaño en un elemento. El vector definitivo y ordenado, empieza a construirse por el final y termina por el principio.
+
+\subsection{Ordenamiento por Cuentas}\index{Algoritmos de Ordenacion!Ordenamiento por Cuentas}
+
+\subsubsection{Descripcion del Algortimo}\index{Algoritmos de Ordenacion!Ordenamiento por Cuentas!Descripcion del Algoritmo}
+
+El ordenamiento por cuentas es un algortimo en el que se cuenta el número de elementos de cada clase para luego ordenarlos. Sólo puede ser utilizado por tanto para ordenar elementos que sean contables (como los números enteros en un determinado intervalo, pero no los números reales, por ejemplo).
+
+El primer paso consiste en averiguar cuál es el intervalo dentro del que están los datos a ordenar (valores mínimo y máximo). Después se crea un vector de números enteros con tantos elementos como valores haya en el intervalo [mínimo, máximo], y a cada elemento se le da el valor 0 (0 apariciones). Tras esto se recorren todos los elementos a ordenar y se cuenta el número de apariciones de cada elemento (usando el vector que hemos creado). Por último, basta con recorrer este vector para tener todos los elementos ordenados.
+
+\section{Busqueda Binaria}\index{Busqueda Binaria}
+
+\subsection{Descripcion del Algoritmo}\index{Busqueda Binaria!Descripcion del Algoritmo}
+
+El algortimo de busqueda binaria esta basado en la tecnica divide y venceras. Se usa sobre un conjunto de elemntos ordenados y tiene complejidad de $ O(n \log n) $
+
+En una forma general el algoritmo de busqueda binaria se puede usar en cualquier funcion "binaria", es decir que sea falsa para un primer intervalo del conjunto y verdadera para el resto del conjunto, o viceversa.
+
