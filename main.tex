@@ -25,51 +25,11 @@
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
 \usepackage[utf8]{inputenc} % Required for including letters with accents
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+
 \usepackage{listings} % Para estrofas de codigo
-%%%%%%%%%%%%%%%Personalizacion del listings
+\usepackage{caption} % Para captar label y caption del lstlisting o listing
 
-
-
-%%Otra configuracion 
-%\lstdefinestyle{customc}{
-%  belowcaptionskip=1\baselineskip,
-%  breaklines=true,
-%  frame=L,
-%  xleftmargin=\parindent,
-%  language=C,
-%  showstringspaces=false,
-%  basicstyle=\footnotesize\ttfamily,
-%  keywordstyle=\bfseries\color{green!40!black}\textbf,
-%  commentstyle=\itshape\color{purple!40!black},
-%  identifierstyle=\color{blue},
-%  stringstyle=\color{orange},
-%}
-%\lstdefinestyle{customcpp}{
-%  belowcaptionskip=1\baselineskip,
-%  breaklines=true,
-%  %frame=L,
-%  %xleftmargin=\parindent,
-%  language=C,
-%  showstringspaces=false,
-%  basicstyle=\footnotesize\ttfamily,
-%  keywordstyle=\bfseries\color{green!40!black},
-%  commentstyle=\itshape\color{graycodeblocks},
-%  identifierstyle=\color{blue},
-%  stringstyle=\color{orange},
-%}
-
-\usepackage{caption}
-%\DeclareCaptionFont{white}{\color{black}}
-%\DeclareCaptionFormat{listing}{%%%%
-  %\parbox{\textwidth}{\colorbox{white}{\parbox{\textwidth}{#1#2#3}}\vskip-4pt}}
-%\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
-%\lstset{frame=lrb,xleftmargin=\fboxsep,xrightmargin=-\fboxsep}
-
-
-%\lstset{escapechar=@,style=customc, frame=lrb,xleftmargin=\fboxsep,xrightmargin=-\fboxsep}%%% Para la habilitar la segunda config comentar si no.
-%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%5
+%%%%%%%%%%%%%%%%%%%%%%%
 \definecolor{gray97}{gray}{.97}
 \definecolor{gray75}{gray}{.75}
 \definecolor{gray45}{gray}{.45}
@@ -102,7 +62,7 @@
      %
      texcl=true, %para abilitar las tildes en el comentario
    }
- 
+
 % minimizar fragmentado de listados
 \lstnewenvironment{listing}[1][]
    {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
@@ -115,6 +75,17 @@
 \lstdefinestyle{Cpp}
    {language=C++,
    }
+
+%%%%%%%%%%%%%Aumentar sub sub section 
+
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
@@ -132,15 +103,16 @@
 
 \input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
 
-%Cambiando al español :p o a lo que queres
-\renewcommand{\chaptername}{Lecture}
-%\renewcommand*\contentsname{Contenidos} %Para cambiar el nombre por defecto'Contents' por Contenidos aqui por alguna razon no cambia esta en content
-\renewcommand*{\lstlistingname}{Codigo}
-\renewcommand*{\lstlistlistingname}{Lista de \lstlistingname s} 
 
 \begin{document}
 
+%Cambiando al español :p o a lo que queres
+
+%\renewcommand*\contentsname{Contenidos} %Para cambiar el nombre por defecto'Contents' por Contenidos aqui por alguna razon no cambia esta en content
+\renewcommand*{\lstlistingname}{Codigo}
+\renewcommand*{\lstlistlistingname}{Lista de \lstlistingname s} 
 \renewcommand{\chaptername}{Capítulo}% Para cambiar el nombre por defecto'Chapter' por Capitulo
+\renewcommand*\contentsname{Contenidos} %Para cambiar el nombre por defecto'Contents' por Contenidos
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -178,10 +150,10 @@ Introducción a los algoritmos en c++\par % Book title
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
 
-\chapterimage{chapter_head_000.pdf} % Table of contents heading image
+%\chapterimage{chapter_head_000.pdf} % Table of contents heading image
 
 \pagestyle{empty} % No headers
-\renewcommand*\contentsname{Contenidos} %Para cambiar el nombre por defecto'Contents' por Contenidos
+
 \tableofcontents % Print the table of contents itself
 
 \cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
@@ -217,6 +189,7 @@ Introducción a los algoritmos en c++\par % Book title
 
 %----------------------------------------------------------------------------------------
 
+%Listar las estrofas de códigos
 \lstlistoflistings
 
 \end{document}
