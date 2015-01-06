@@ -19,7 +19,25 @@
 \BOOKMARK [2][-]{subsection.1.3.3}{Sentencias Break y Continue}{section.1.3}% 19
 \BOOKMARK [0][-]{chapter.2}{Estructura de datos 1}{}% 20
 \BOOKMARK [0][-]{chapter.3}{Programaci\363n modular}{}% 21
-\BOOKMARK [0][-]{chapter*.2}{Bibliography}{}% 22
-\BOOKMARK [1][-]{section*.3}{Books}{chapter*.2}% 23
-\BOOKMARK [1][-]{section*.4}{Articles}{chapter*.2}% 24
-\BOOKMARK [0][-]{section*.5}{Index}{}% 25
+\BOOKMARK [1][-]{section.3.1}{Introduccion}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.1.1}{\277Qu\351 es la Programaci\363n Modular?}{section.3.1}% 23
+\BOOKMARK [1][-]{section.3.2}{Modulos}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.2.1}{Concepto de Modulo}{section.3.2}% 25
+\BOOKMARK [2][-]{subsection.3.2.2}{Elementos de declaracion del Modulo}{section.3.2}% 26
+\BOOKMARK [2][-]{subsection.3.2.3}{Ejemplos}{section.3.2}% 27
+\BOOKMARK [1][-]{section.3.3}{Recursividad}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.3.1}{Que es recursvidad?}{section.3.3}% 29
+\BOOKMARK [2][-]{subsection.3.3.2}{Ejemplos}{section.3.3}% 30
+\BOOKMARK [0][-]{chapter.4}{Algoritmos Basicos}{}% 31
+\BOOKMARK [1][-]{section.4.1}{Algoritmos de Ordenanmiento}{chapter.4}% 32
+\BOOKMARK [2][-]{subsection.4.1.1}{Ordenamiento Rapido}{section.4.1}% 33
+\BOOKMARK [2][-]{subsection.4.1.2}{Ordenamiento por mezcla}{section.4.1}% 34
+\BOOKMARK [2][-]{subsection.4.1.3}{Ordenamiento por Monticulos}{section.4.1}% 35
+\BOOKMARK [2][-]{subsection.4.1.4}{Ordenamiento por Cuentas}{section.4.1}% 36
+\BOOKMARK [1][-]{section.4.2}{Busqueda Binaria}{chapter.4}% 37
+\BOOKMARK [2][-]{subsection.4.2.1}{Descripcion del Algoritmo}{section.4.2}% 38
+\BOOKMARK [2][-]{subsection.4.2.2}{Ejemplo}{section.4.2}% 39
+\BOOKMARK [0][-]{chapter*.2}{Bibliography}{}% 40
+\BOOKMARK [1][-]{section*.3}{Books}{chapter*.2}% 41
+\BOOKMARK [1][-]{section*.4}{Articles}{chapter*.2}% 42
+\BOOKMARK [0][-]{section*.5}{Index}{}% 43

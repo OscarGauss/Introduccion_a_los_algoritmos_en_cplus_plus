@@ -94,3 +94,13 @@
 \contentsline {lstlisting}{\numberline {1.47}Break While}{23}{lstlisting.1.47}
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {1.48}Continue While}{23}{lstlisting.1.48}
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {3.1}Factorial}{27}{lstlisting.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {3.2}Factorial Recursivo}{28}{lstlisting.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {3.3}Sucesion Fibonacci}{29}{lstlisting.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {4.1}QuickSort}{31}{lstlisting.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {4.2}Merge Sort}{32}{lstlisting.4.2}
