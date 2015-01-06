@@ -26,23 +26,47 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.3}Comentarios}{10}{subsection.1.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.4}Impresi\IeC {\'o}n}{11}{subsection.1.2.4}
+\contentsline {subsection}{\numberline {1.2.4}Datos primitivos}{11}{subsection.1.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.5}Datos primitivos}{12}{subsection.1.2.5}
+\contentsline {subsection}{\numberline {1.2.5}Variables y constantes}{12}{subsection.1.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.6}Variables}{12}{subsection.1.2.6}
+\contentsline {subsection}{\numberline {1.2.6}Lectura e Impresi\IeC {\'o}n}{12}{subsection.1.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.7}Lectura}{12}{subsection.1.2.7}
+\contentsline {section}{\numberline {1.3}Estructuras de Control}{15}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Estructura de datos 1}{13}{chapter.2}
+\contentsline {subsection}{\numberline {1.3.1}Sentencias de decisi\IeC {\'o}n}{15}{subsection.1.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Programaci\IeC {\'o}n modular}{15}{chapter.3}
+\contentsline {subsubsection}{\numberline {1.3.1.1}Sentencia if}{15}{subsubsection.1.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {mycolor}Bibliography}}{17}{chapter*.2}
+\contentsline {subsubsection}{\numberline {1.3.1.2}Sentencia switch}{17}{subsubsection.1.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Books}{17}{section*.3}
+\contentsline {subsubsection}{\numberline {1.3.1.3}Operador condicional ternario ?:}{18}{subsubsection.1.3.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Articles}{17}{section*.4}
+\contentsline {subsection}{\numberline {1.3.2}Sentencias de iteraci\IeC {\'o}n}{19}{subsection.1.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {mycolor}Index}}{19}{section*.5}
+\contentsline {subsubsection}{\numberline {1.3.2.1}Sentencias For}{19}{subsubsection.1.3.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.3.2.2}Sentencia While}{21}{subsubsection.1.3.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.3.2.3}Sentencia Do - While}{21}{subsubsection.1.3.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.3}Sentencias Break y Continue}{22}{subsection.1.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.3.3.1}Break}{22}{subsubsection.1.3.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.3.3.2}Continue}{23}{subsubsection.1.3.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {1.3.3.3}Uso de break y continue junto con while}{23}{subsubsection.1.3.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Estructura de datos 1}{25}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Programaci\IeC {\'o}n modular}{27}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\leavevmode {\color {mycolor}Bibliography}}{29}{chapter*.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Books}{29}{section*.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Articles}{29}{section*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\leavevmode {\color {mycolor}Index}}{31}{section*.5}
 \contentsfinish 

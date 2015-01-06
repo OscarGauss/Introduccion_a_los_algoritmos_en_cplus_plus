@@ -21,8 +21,31 @@
 %----------------------------------------------------------------------------------------
 %	MAIN TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%
 
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+%%%%%%%%%%%%%%%%%%%%
 \usepackage{titletoc} % Required for manipulating the table of contents
+
+%%%%
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+%%%%%%%%555
+
 
 \contentsmargin{0cm} % Removes the default margin
 % Chapter text styling
@@ -38,6 +61,14 @@
 {}
 {\sffamily\hfill\color{black}\thecontentspage} % Page number
 []
+
+% Section text styling
+\titlecontents{subsubsection}[1.25cm] % Indentation
+{\addvspace{5pt}\sffamily\bfseries} % Spacing and font options for sections
+{\contentslabel[\thecontentslabel]{1.25cm}} % Section number
+{}
+{\sffamily\hfill\color{black}\thecontentspage} % Page number
+[]
 % Subsection text styling
 \titlecontents{subsection}[1.25cm] % Indentation
 {\addvspace{1pt}\sffamily\small} % Spacing and font options for subsections
@@ -45,6 +76,16 @@
 {}
 {\sffamily\;\titlerule*[.5pc]{.}\;\thecontentspage} % Page number
 [] 
+
+%%%%%%%%
+% SUBSubsection text styling
+\titlecontents{subsubsection}[1.25cm] % Indentation
+{\addvspace{10pt}\sffamily\small} % Spacing and font options for subsections
+{\contentslabel[\thecontentslabel]{1.25cm}} % Subsection number
+{}
+{\sffamily\;\titlerule*[.5pc]{.}\;\thecontentspage} % Page number
+[] 
+
 
 %----------------------------------------------------------------------------------------
 %	MINI TABLE OF CONTENTS IN CHAPTER HEADS

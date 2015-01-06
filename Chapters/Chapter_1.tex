@@ -7,6 +7,7 @@
 \chapter{Introducción a la programación en c++}
 \renewcommand{\chaptername}{Lecture}
 \setlength{\parindent}{0pt}
+
 \section{Introducción}\index{Introducción}
 
 \subsection{¿Qué es un Lenguaje de Programación?}\index{Introducción!¿Qué es un Lenguaje de Programación?}
@@ -225,12 +226,12 @@ Y a continuación se debe mostrar algo como lo siguiente:
 Hola Mundo
 \end{listing}
 
-
 \subsection{Sintaxis}\index{Lo mas basico!Sintaxis}
 
 Sintaxis es la forma correcta en que se deben escribir las instrucciones para el computador en un lenguaje de programación específico. C++ hereda la sintaxis de C estándar, es decir, la mayoría de programas escritos para el C estándar pueden ser compilados en C++.
 
 \textbf{El punto y coma}
+
 El punto y coma es uno de los simbólos más usados en C, C++; y se usa con el fin de indicar el final de una línea de instrucción. El punto y coma es de uso obligatorio.
 
 \textbf{Ejemplo}
@@ -258,6 +259,7 @@ for (i=0; i < 10; i++) cout << i;
 \end{lstlisting}
 
 \textbf{Espacios y tabuladores}
+
 Usar caracteres extras de espaciado o tabuladores ( caracteres tab ) es un mecanismo que nos permite ordenar de manera más clara el código del programa que estemos escribiendo, sin embargo, el uso de estos es opcional ya que el compilador ignora la presencia de los mismos. Por ejemplo, el segundo de los ejemplos anteriores se podría escribir como:
 
 \begin{lstlisting}[style=Cpp, label=sintaxis, caption=Sintaxis]
@@ -302,10 +304,127 @@ int main()
 }
 \end{lstlisting}
 
+\subsection{Datos primitivos}\index{Lo mas basico!Datos primitivos}
 
-\subsection{Impresión}\index{Lo mas basico!Impresión}
+En un lenguaje de programación es indispensable poder almacenar información, para esto en C++ están disponibles los siguientes tipos que permiten almacenar información numérica de tipo entero o real:
 
-Para la impresión se utilliza \textit{cout} de la siguiente manera:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		Nombre & Descripción & Tamaño & Rango de valores\\
+		\hline
+		bool & Valor booleano & 1byte & true o false\\
+		\hline
+		char & Carácter o entero pequeño & 1byte & De -128 a 127\\
+		\hline
+		short int & Entero corto & 2bytes & De -32768 a 32767\\
+		\hline
+		int & Entero & 4bytes & De -2147483648 a 2147483647\\
+		\hline
+		long long & Entero largo & 8bytes & -9223372036854775808 a 9223372036854775807\\
+		\hline
+		float & Número de punto flotante & 4bytes & 3.4e +/- 38 (7 digitos)\\
+		\hline
+		double & Float con doble precisión & 8bytes & 1.7e +/- 308 (15 digitos)\\
+		\hline
+	\end{tabular}
+\end{center}
+
+Los valores dependen de la arquitectura utilizada. Los mostrados son los que generalmente se encuentran en una máquina típica de arquitectura 32 bits.
+
+\textbf{El Modificador unsigned}
+
+El modificador unsigned es utilizado únicamente con los enteros, su utilización permite utilizar en los enteros únicamente la parte positiva,
+
+\begin{lstlisting}[style=Cpp, label=unsigned, caption=Unsigned]
+int a; 			// Almacena valores entre -32768 y 32767
+unsigned int a; // Almacena valores entre 0 y 65535
+\end{lstlisting}
+
+
+\subsection{Variables y constantes}\index{Lo mas basico!Variables y constantes}
+
+Una variable, como su nombre lo indica, es un determinado objeto cuyo valor puede cambiar durante el proceso de una tarea específica. Contrario a una variable, una constante es un determinado objeto cuyo valor no puede ser alterado durante el proceso de una tarea específica. En C, C++ para declarar variables no existe una palabra especial, es decir, las variables se declarán escribiendo el tipo seguido de uno o más identificadores o nombres de variables. Por otro lado, para declarar constantes existe la palabra reservada const, así como la directiva \textit{\#define}. A continuación se muestran ejemplos de declaración de variables y constantes.
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Variables & Constantes & Constantes\\
+		\hline
+		int a; & const int a = 100;	&  \#define a 100\\
+		\hline
+		float b; & const float b = 100; & \#define b 100\\
+		\hline
+	\end{tabular}
+\end{center}
+
+\textbf{Notas:}
+
+A diferencia de las constantes declaradas con la palabra const los símbolos definidos con \textit{\#define} no ocupan espacio en la memoria del código ejecutable resultante.
+
+El tipo de la variable o constante puede ser cualquiera de los listados en Tipos primitivos, o bien de un tipo definido por el usuario.
+
+Las constantes son usadas a menudo con un doble propósito, el primero es con el fin de hacer más legible el código del programa, es decir, si se tiene (por ejemplo) la constante numerica 3.1416 y esta representa al número pi, entonces podemos hacer declaraciones tales como:
+
+\begin{lstlisting}[style=Cpp, label=constantes, caption=Constantes]
+#define pi 3.1416
+\end{lstlisting}
+
+En este caso podremos usar la palabra pi en cualquier parte del
+programa y el compilador se encargará de cambiar dicho simbolo por 3.1416.
+o bien,
+
+\begin{lstlisting}[style=Cpp, label=constantes, caption=Constantes]
+const pi = 3.1416;
+\end{lstlisting}
+
+En este otro caso podremos usar la palabra pi en cualquier parte del programa y el compilador se encargará
+de cambiar dicho símbolo por una referencia a la constante pi guardada en la memoria.
+
+\subsection{Lectura e Impresión}\index{Lo mas basico!Lectura e Impresión}
+
+\textbf{La iostream}
+
+La iostream es la biblioteca estándar en C++ para poder tener acceso a los dispositivos estándar de entrada y/o salida. En sus programas, si usted desea hacer uso de los objetos cin, cout, cerr y clog tendrá que incluir ( por medio de la directiva \textit{\#include} ) el uso de la biblioteca iostream. En la iostream se encuentran definidas las clases ios ( misma que es la base para las clases que implementen operaciones de entrada y/o salida de datos ), istream ( para operaciones de entrada ) y ostream ( para operaciones de salida ). Aparte de las clases mencionadas, en la iostream se encuentra una lista de variables y constantes ( atributos ) que son accesibles por el usuario a través del operador de ámbito ( :: ) si es que no se incluyera \textit{using namespace std}.
+
+Si usted usa la directiva \#include <iostream.h> o \#include <iostream> en sus programas, automáticamente la iostream pone a su disposición los objetos cin, cout, clog y cerr en el ámbito estándar (std), de tal manera que usted puede comenzar a enviar o recibir información a través de los mismos sin siquiera preocuparse de su creación. Asi, un sencillo ejemplo del uso de los objetos mencionados se muestra en seguida.
+
+\begin{lstlisting}[style=Cpp, label=iostream, caption=Iostream]
+// De nuevo con el hola mundo...
+#include <iostream.h>
+int main()
+{
+    std::cout << "Hola mundo";    // imprimir mensaje (en la pantalla)
+    std::cin.get();    // lectura ( entrada del teclado )
+    return 0;
+}
+\end{lstlisting}
+
+\textbf{Operadores de direccionamiento}
+
+Los operadores de direccionamiento son los encargados de manipular el flujo de datos desde o hacia el dispositivo referenciado por un stream específico. El operador de direccionamiento para salidas es una pareja de símbolos de "menor que" <<, y el operador de direccionamiento para entradas es una pareja de símbolos de "mayor que" >>. Los operadores de direccionamiento se colocan entre dos operandos, el primero es el Stream y el segundo es una variable o constante que proporciona o recibe los datos de la operación. Por ejemplo, en el siguiente programa y en la instrucción cout << "Entre su nombre: "; la constante "Entre su nombre: " es la fuente o quien proporciona los datos para el objeto cout. Mientras que en la instrucción cin >> nombre la variable nombre es el destino o quien recibe los datos provenientes del objeto cin.
+
+\begin{lstlisting}[style=Cpp, label=operdirec, caption=Oper Direc]
+// De nuevo con el hola mundo...
+#include <iostream.h>
+int main()
+{
+    char nombre[80];
+    cout << "Entre su nombre: ";
+    cin  >> nombre;
+    cout << "Hola," << nombre;
+    cin.get();
+    return 0;
+}
+\end{lstlisting}
+
+Observe que si en una misma línea de comando se desea leer o escribir sobre varios campos a la vez, no es necesario nombrar más de una vez al stream. Ejemplos:
+
+\begin{lstlisting}[style=Cpp, label=ejemplo-ioc, caption=Ejemplo Cin Cout]
+cout << "Hola," << nombre;
+cin >> A >> B >> C;
+\end{lstlisting}
+
+Otro ejemplo del manejo de \textit{cin}:
 
 \begin{lstlisting}[style=Cpp, label=impresión, caption=Impresión]
 // Programa que muestra diversos textos por consola
@@ -352,38 +471,480 @@ el programa, al ejecutarse, lo situe como el programador quiso
 
 \end{listing}
 
-\subsection{Datos primitivos}\index{Lo mas basico!Datos primitivos}
 
-En un lenguaje de programación es indispensable poder almacenar información, para esto en C++ están disponibles los siguientes tipos que permiten almacenar información numérica de tipo entero o real:
+
+\section{Estructuras de Control}\index{Estructuras de Control}
+
+Las estructuras de control permiten modificar el flujo de ejecución de las instrucciones de un programa.
+
+Con las estructuras de control se puede:
+
+\begin{itemize}
+\item De acuerdo a una condición, ejecutar un grupo u otro de sentencias (\textbf{If})
+\item De acuerdo al valor de una variable, ejecutar un grupo u otro de sentencias (\textbf{Switch})
+\item Ejecutar un grupo de sentencias mientras se cumpla una condición (\textbf{While})
+\item Ejecutar un grupo de sentencias hasta que se cumpla una condición (\textbf{Do-While})
+\item Ejecutar un grupo de sentencias un número determinado de veces (\textbf{For})
+\end{itemize}
+
+Todas las estructuras de control tienen un único punto de entrada y un único punto de salida.
+
+
+\subsection{Sentencias de decisión}\index{Estructuras de Control!Sentencias de decisión}
 
 \begin{center}
-	\begin{tabular}{|c|c|c|c|}
-		\hline
-		Nombre & Descripción & Tamaño & Rango de valores\\
-		\hline
-		bool & Valor booleano, puede tomar dos valores(verdadero o falso) & 1byte & true o false\\
-		\hline
-		char & Carácter o entero pequeño & 1byte & Con signo: -128 a 127 Sin signo: 0 a 255\\
-		\hline
-		short int & Entero corto & 2bytes & Con signo: -32768 a 32767 Sin signo: 0 a 65535\\
-		\hline
-		int & Entero & 4bytes & Con signo: -2147483648 a 2147483647 Sin signo: 0 a 4294967295\\
-		\hline
-		long long & Entero largo & 8bytes & Con signo: -9223372036854775808 a 9223372036854775807 Sin signo: 0 a 18,446,744,073,709,551,615\\
-		\hline
-		float & Número de punto flotante & 4bytes & 3.4e +/- 38 (7 digitos)\\
-		\hline
-		double & De punto flotante de doble precisión & 8bytes & 1.7e +/- 308 (15 digitos)\\
-		\hline
-	\end{tabular}
+	\textbf{Definición}
 \end{center}
 
+Las sentencias de decisión o también llamadas de CONTROL DE FLUJO son estructuras de control que realizan una pregunta la cual retorna verdadero o falso (evalúa una condicion) y selecciona la siguiente instrucción a ejecutar dependiendo la respuesta o resultado.
 
 
+\subsubsection{Sentencia if}\index{Estructuras de Control!Sentencias de decisión!Sentencia if}
 
-\subsection{Variables}\index{Lo mas basico!Variables}
+La instrucción if es, por excelencia, la más utilizada para construir estructuras de control de flujo.
+
+\begin{center}
+	\textbf{Sintaxis}
+\end{center}
+
+\textbf{Primera Forma}
+
+Ahora bién, la sintaxis utilizada en la programación de C++ es la siguiente:
+
+\begin{lstlisting}[style=Cpp, label=sintaxis-if, caption=Sintaxis If]
+if (condicion)
+   {
+       Set de instrucciones
+   }
+\end{lstlisting}
+
+siendo \textit{"condicion"} el lugar donde se pondrá la condición que se tiene que cumplir para que sea verdadera la sentencia y así proceder a realizar el \textit{"set de instrucciones"} o código contenido dentro de la sentencia.
+
+\textbf{Segunda Forma}
+
+Ahora veremos la misma sintaxis pero ahora le añadiremos la parte \textit{"Falsa"} de la sentencia:
+
+\begin{lstlisting}[style=Cpp, label=sintaxis-if-else, caption=Sintaxis If Else]
+if (condicion)
+   {
+       Set de instrucciones    //Parte VERDADERA
+   }
+else
+   {
+       Set de instrucciones 2  //Parte FALSA
+   }
+\end{lstlisting}
+
+La forma mostrada anteriormente muestra la union de la parte \textit{"VERDADERA"} con la nueva secuencia la cual es la parte \textit{"FALSA"} de la sentencia de decision \textit{"IF"} en la cual esta compuesta por el:
+
+\begin{lstlisting}[style=Cpp, label=sintaxis-else, caption=Sintaxis Else]
+else
+   {
+     Set de instrucciones 2  //Parte FALSA
+   }
+\end{lstlisting}
+
+la palabra \textit{"else"} o \textit{"De lo contrario"} indica al lenguaje que de lo contrario al no ser verdadera o no se cumpla la parte verdadera entonces realizara el \textit{"set de instrucciones 2"}.
+
+\begin{center}
+	\textbf{Ejemplos De Sentencias If}
+\end{center}
+
+\textbf{Ejemplo 1:}
+
+\begin{lstlisting}[style=Cpp, label=if-ejemplo-1, caption=If Ejemplo 1]
+if(numero == 0) //La condicion indica que tiene que ser igual a Cero
+    {
+      cout<<"El Numero Ingresado es Igual a Cero";
+    }
+\end{lstlisting}
+
+\textbf{Ejemplo 2:}
+
+\begin{lstlisting}[style=Cpp, label=if-ejemplo-2, caption=If Ejemplo 2]
+if(numero > 0) // la condicion indica que tiene que ser mayor a Cero
+    {    
+      cout<<"El Numero Ingresado es Mayor a Cero";
+    }
+\end{lstlisting}
+
+\textbf{Ejemplo 3:}
+
+\begin{lstlisting}[style=Cpp, label=if-ejemplo-3, caption=If Ejemplo 3]
+if(numero < 0) // la condicion indica que tiene que ser menor a Cero
+    {    
+      cout<<"El Numero Ingresado es Menor a Cero";
+    }
+\end{lstlisting}
+
+Ahora uniremos todos estos ejemplos para formar un solo programa mediante la utilización de la sentencia "Else" e introduciremos el hecho de que se puede escribir en este espacio una sentencia if ya que podemos ingresar cualquier tipo de código dentro de la sentencia escrita después de un Else.
+
+\textbf{Ejemplo 4:}
+
+\begin{lstlisting}[style=Cpp, label=if-ejemplo-4, caption=If Ejemplo 4]
+if(numero == 0) //La condicion indica que tiene que ser igual a Cero
+   {
+     cout<<"El Numero Ingresado es Igual a Cero";
+   }
+else
+   {
+      if(numero > 0) // la condicion indica que tiene que ser mayor a Cero
+      {    
+          cout<<"El Numero Ingresado es Mayor a Cero";
+      }
+      else
+      {
+         if(numero < 0) // la condicion indica que tiene que ser menor a Cero
+         {    
+           cout<<"El Numero Ingresado es Menor a Cero";
+         }
+      }
+    }
+\end{lstlisting}
 
 
+\subsubsection{Sentencia switch}\index{Estructuras de Control!Sentencias de decisión!Sentencia switch}
+
+switch es otra de las instrucciones que permiten la construcción de estructuras de control. A diferencia de if, para controlar el flujo por medio de una sentencia switch se debe de combinar con el uso de las sentencias \textit{case} y \textit{break}.
+
+\textbf{Notas:} cualquier número de casos a evaluar por switch así como la sentencia default son opcionales. La sentencia switch es muy útil en los casos de presentación de menus.
+
+\begin{center}
+	\textbf{Sintaxis}
+\end{center}
+Ahora bién, la sintaxis utilizada en la programación de C++ es la siguiente:
+
+\begin{lstlisting}[style=Cpp, label=sintaxis-switch, caption=Sintaxis Switch]
+switch (condicion)
+{
+    case primer_caso:
+         bloque de instrucciones 1
+    break;
+
+    case segundo_caso:
+         bloque de instrucciones 2
+    break;
+
+    case caso_n:
+         bloque de instrucciones n
+    break;
+
+    default: bloque de instrucciones por defecto
+}
+\end{lstlisting}
+
+\begin{center}
+	\textbf{Ejemplos De Sentencias Switch}
+\end{center}
+
+\textbf{Ejemplo 1}
+
+\begin{lstlisting}[style=Cpp, label=switch-ejemplo-1, caption=Switch Ejemplo 1]
+switch (numero)
+{
+    case 0: cout << "numero es cero";
+}
+\end{lstlisting}
+
+\textbf{Ejemplo 2}
+
+\begin{lstlisting}[style=Cpp, label=switch-ejemplo-2, caption=Switch Ejemplo 2]
+switch (opcion)
+{
+    case 0: cout << "Su opcion es cero"; break;
+    case 1: cout << "Su opcion es uno"; break;
+    case 2: cout << "Su opcion es dos";
+}
+\end{lstlisting}
+
+\textbf{Ejemplo 3}
+
+\begin{lstlisting}[style=Cpp, label=switch-ejemplo-3, caption=Switch Ejemplo 3]
+switch (opcion)
+{
+    case 1: cout << "Su opcion es 1"; break;
+    case 2: cout << "Su opcion es 2"; break;
+    case 3: cout << "Su opcion es 3"; break;
+    default: cout << "Elija una opcion entre 1 y 3";
+}
+\end{lstlisting}
 
 
-\subsection{Lectura}\index{Lo mas basico!Lectura}
+\subsubsection{Operador condicional ternario ?:}\index{Estructuras de Control!Sentencias de decisión!Operador condicional ternario ?:}
+
+En C/C++, existe el operador condicional ( ?: ) el cual es conocido por su estructura como ternario. El comportamiento de dicho operador es el mismo que una estructura if - then - else del lenguaje BASIC (y de la función IIf de Visual Basic). El operador condicional ?: es útil para evaluar situaciones tales como:
+
+Si se cumple tal condición entonces haz esto, de lo contrario haz esto otro.
+
+\begin{center}
+	\textbf{Sintaxis}
+\end{center}
+
+\begin{lstlisting}[style=Cpp, label=sintaxis-switch, caption=Sintaxis Switch]
+( (condicion) ? proceso1 : proceso2 )
+\end{lstlisting}
+
+En donde, condicion es la expresión que se evalua, proceso1 es la tarea a realizar en el caso de que la evaluación resulte verdadera, y proceso2 es la tarea a realizar en el caso de que la evaluación resulte falsa.
+
+\begin{center}
+	\textbf{Ejemplos De Sentencias Operador condicional ternario ?:}
+\end{center}
+
+\textbf{Ejemplo 1}
+
+\begin{lstlisting}[style=Cpp, label=condicional-ejemplo-1, caption=Condicional Ejemplo 1]
+int edad;
+cout << "Cual es tu edad: ";
+cin >> edad;
+cout << ( (edad < 18) ? "Eres joven aun" : "Ya tienes la mayoria de edad" );
+El ejemplo anterior podria escribirse de la siguiente manera:
+
+int edad;
+cout << "Cual es tu edad: ";
+cin >> edad;
+if (edad < 18) cout << "Eres joven aun";
+    else cout << "Ya tienes la mayoria de edad";
+\end{lstlisting}
+
+\textbf{Ejemplo 2}
+
+Vamos a suponer que deseamos escribir una función que opere sobre dos valores numéricos y que la misma ha de regresar 1 (true) en caso de que el primer valor pasado sea igual al segundo valor; en caso contrario la función debe retornar 0 (false).
+
+\begin{lstlisting}[style=Cpp, label=condicional-ejemplo-2, caption=Condicional Ejemplo 2]
+int es_igual( int a, int b)
+{
+    return ( (a == b) ? 1 : 0 )
+}
+\end{lstlisting}
+
+\subsection{Sentencias de iteración}\index{Estructuras de Control!Sentencias de iteración}
+
+\begin{center}
+	\textbf{Definición}
+\end{center}
+
+Las Sentencias de Iteración o Ciclos son estructuras de control que repiten la ejecución de un grupo de instrucciones. Básicamente, una sentencia de iteración es una estructura de control condicional, ya que dentro de la misma se repite la ejecución de una o más instrucciones mientras que una a condición especifica se cumpla. Muchas veces tenemos que repetir un número definido o indefinido de veces un grupo de instrucciones por lo que en estos casos utilizamos este tipo de sentencias. en C++ los ciclos o bucles se construyen por medio de las sentencias for, while y do - while. La sentencia for es útil para los casos en donde se conoce de antemano el número de veces que una o más sentencias han de repetirse. Por otro lado, la sentencia while es útil en aquellos casos en donde no se conoce de antemano el número de veces que una o más sentencias se tienen que repetir.
+
+\subsubsection{Sentencias For}\index{Estructuras de Control!Sentencias de iteración!Sentencias For}
+
+Ahora bién, la sintaxis utilizada en la programación de C++ es la siguiente:
+
+\begin{center}
+	\textbf{Sintaxis}
+\end{center}
+
+\begin{lstlisting}[style=Cpp, label=sintaxis-for, caption=Sintaxis For]
+for(contador; final; incremento)
+{
+    Codigo a Repetir;
+}
+\end{lstlisting}
+
+donde:
+
+\begin{description}
+\item [contador] es una variable numérica
+\item [final] es la condición que se evalua para finalizar el ciclo (puede ser independiente del contador)
+\item [incremento] es el valor que se suma o resta al contador
+\end{description}
+
+Hay que tener en cuenta que el \textit{"for"} evalua la condición de finalización igual que el while, es decir, mientras esta se cumpla continuaran las repeticiones.
+
+\begin{center}
+	\textbf{Ejemplos De Sentencias For}
+\end{center}
+
+\textbf{Ejemplo 1}
+
+\begin{lstlisting}[style=Cpp, label=for-ejemplo-1, caption=For Ejemplo 1]
+for(int i=1; i<=10; i++)
+{
+    cout<<"Hola Mundo";   
+}
+\end{lstlisting}
+
+Esto indica que el contador \textit{"i"} inicia desde 1 y continuará iterando mientras i sea menor o igual a 10 ( en este caso llegará hasta 10) e \textit{"i++"} realiza la sumatoria por unidad lo que hace que el for y el contador se sumen. repitiendo 10 veces \textit{"HOLA MUNDO"} en pantalla.
+
+\textbf{Ejemplo 2}
+
+\begin{lstlisting}[style=Cpp, label=for-ejemplo-2, caption=For Ejemplo 2]
+for(int i=10; i>=0; i--)
+{
+    cout<<"Hola Mundo";   
+}
+\end{lstlisting}
+
+Este ejemplo hace lo mismo que el primero, salvo que el contador se inicializa a 10 en lugar de 1; y por ello cambia la condición que se evalua así como que el contador se decrementa en lugar de ser incrementado.
+
+La condición también puede ser independiente del contador:
+
+\textbf{Ejemplo 3}
+
+\begin{lstlisting}[style=Cpp, label=for-ejemplo-3, caption=For Ejemplo 3]
+int j = 20;
+for(int i=0; j>0; i++){
+    cout<<"Hola"<<i<<" - "<<j<<endl;
+    j--;
+}
+\end{lstlisting}
+
+En este ejemplo las iteraciones continuaran mientras j sea mayor que 0, sin tener en cuenta el valor que pueda tener i.
+
+
+\subsubsection{Sentencia While}\index{Estructuras de Control!Sentencias de iteración!Sentencia While}
+
+Ahora bién, la sintaxis utilizada en la programación de C++ es la siguiente:
+
+\begin{center}
+	\textbf{Sintaxis}
+\end{center}
+
+\begin{lstlisting}[style=Cpp, label=sintaxis-while, caption=Sintaxis While]
+while(condicion)
+{
+    codigo a Repetir
+}
+\end{lstlisting}
+
+donde:
+
+\begin{description}
+\item [condicion] es la expresión a evaluar
+\end{description}
+
+\begin{center}
+	\textbf{Ejemplos De Sentencias While}
+\end{center}
+
+\textbf{Ejemplo 1}
+
+\begin{lstlisting}[style=Cpp, label=while-ejemplo-1, caption=While Ejemplo 1]
+int contador = 0;
+ 
+while(contador<=10)
+{
+    contador=contador+1;
+    cout<<"Hola Mundo";
+}
+\end{lstlisting}
+
+El contador Indica que hasta que este llegue a el total de 10 entonces se detendrá y ya no se realizará el código contenido dentro de la sentencia while, de lo contrario mientras el \textit{"contador"} sea menor a 10 entonces el código contenido se ejecutará desplegando hasta 10 veces "Hola Mundo" en pantalla.
+
+
+\subsubsection{Sentencia Do - While}\index{Estructuras de Control!Sentencias de iteración!Sentencia Do - While}
+
+\begin{center}
+	\textbf{Sintaxis}
+\end{center}
+
+La sentencia do es usada generalmente en cooperación con while para garantizar que una o más instrucciones se ejecuten al menos una vez. Por ejemplo, en la siguiente construcción no se ejecuta nada dentro del ciclo while, el hecho es que el contador inicialmente vale cero y la condición para que se ejecute lo que está dentro del while es \textit{"mientras el contador sea mayor que diez"}. Es evidente que a la primera evaluación hecha por while la condición deja de cumplirse.
+
+\begin{lstlisting}[style=Cpp, label=sintaxis-do-while, caption=Sintaxis Do While]
+int contador = 0;
+ 
+while(contador > 10)
+{
+    contador ++;
+    cout<<"Hola Mundo";
+}
+\end{lstlisting}
+
+Al modificar el segmento de código anterior usando do tenemos:
+
+\begin{lstlisting}[style=Cpp, label=sintaxis-do-while, caption=Sintaxis Do While]
+int contador = 0;
+ 
+do
+{
+    contador ++;
+    cout<<"Hola Mundo";
+}
+while(contador > 10);
+\end{lstlisting}
+
+Observe cómo en el caso de do la condición es evaluada al final en lugar de al principio del bloque de instrucciones y, por lo tanto, el código que le sigue al \textit{do} se ejecuta al menos la primera vez.
+
+
+\subsection{Sentencias Break y Continue}\index{Estructuras de Control!Sentencias Break y Continue}
+
+En la sección (Sentencia switch) vimos que la sentencia break es utilizada con el propósito de forzar un salto dentro del bloque switch hacia el final del mismo. En esta sección volveremos a ver el uso de break, salvo que esta ocasión la usaremos junto con las sentecias for y la sentencia while. Además, veremos el uso de la sentencia continue.
+
+
+\subsubsection{Break}\index{Estructuras de Control!Sentencias de iteración!Sentencias Break y Continue!Break}
+
+La sentencia break se usa para forzar un salto hacia el final de un ciclo controlado por for o por while.
+
+\begin{center}
+	\textbf{Ejemplo}
+\end{center}
+
+En el siguiente fragmento de código la sentencia break cierra el ciclo for cuando la variable ( i ) es igual a 5. 
+
+\begin{lstlisting}[style=Cpp, label=break, caption=Break]
+for (int i=0; i<10; i++) {
+    if (i == 5) break;
+    cout << i << " ";
+}
+\end{lstlisting}
+
+La salida para el mismo será:
+
+\begin{listing}[style=consola, numbers=none,label=resultado-break,caption=Resultado Break]
+0 1 2 3 4
+\end{listing}
+
+
+\subsubsection{Continue}\index{Estructuras de Control!Sentencias de iteración!Sentencias Break y Continue!Continue}
+
+La sentencia continue se usa para ignorar una iteración dentro de un ciclo controlado por for o por while.
+
+\begin{center}
+	\textbf{Ejemplo}
+\end{center}
+
+En el siguiente fragmento de código la sentencia continue ignora la iteración cuando la variable ( i ) es igual a 5.
+
+\begin{lstlisting}[style=Cpp, label=continue, caption=Continue]
+for (int i=0; i<10; i++) {
+    if (i == 5) continue;
+    cout << i << " ";
+}
+\end{lstlisting}
+
+La salida para el mismo será:
+
+\begin{listing}[style=consola, numbers=none,label=resultado-continue,caption=Resultado Continue]
+0 1 2 3 4 6 7 8 9
+\end{listing}
+
+\subsubsection{Uso de break y continue junto con while}\index{Estructuras de Control!Sentencias de iteración!Sentencias Break y Continue!Uso de break y continue junto con while}
+
+Los dos ejemplos anteriores se presentan en seguida, salvo que en lugar de for se hace uso de while.
+
+\textbf{Nota:} no deje de observar que la construcción del ciclo while para el caso de la sentencia continue es diferente, esto para garantizar que el ciclo no vaya a caer en una iteración infinita.
+
+\begin{center}
+	\textbf{Break}
+\end{center}
+
+\begin{lstlisting}[style=Cpp, label=break-while, caption=Break While]
+int i = 0;
+while (i<10) {
+    if (i == 5) break;
+    cout << i << " ";
+    i++;
+}
+\end{lstlisting}
+
+\begin{center}
+	\textbf{Continue}
+\end{center}
+
+\begin{lstlisting}[style=Cpp, label=continue-while, caption=Continue While]
+int i = -1;
+while (i<10) {
+    i++;
+    if (i == 5) continue;
+    cout << i << " ";
+}
+\end{lstlisting}
