@@ -1,45 +1,59 @@
-\indexentry{Introducci\IeC {\'o}n|hyperpage}{5}
-\indexentry{Introducci\IeC {\'o}n!\IeC {\textquestiondown }Qu\IeC {\'e} es un Lenguaje de Programaci\IeC {\'o}n?|hyperpage}{5}
-\indexentry{Introducci\IeC {\'o}n!Historia de C++|hyperpage}{5}
-\indexentry{Introducci\IeC {\'o}n!\IeC {\textquestiondown }Qu\IeC {\'e} es C++?|hyperpage}{6}
-\indexentry{Introducci\IeC {\'o}n!Herramientas Necesarias|hyperpage}{6}
-\indexentry{Introducci\IeC {\'o}n!Consejos iniciales antes de programar|hyperpage}{7}
-\indexentry{Introducci\IeC {\'o}n!Ejemplos|hyperpage}{7}
-\indexentry{Lo mas basico|hyperpage}{8}
-\indexentry{Lo mas basico!Proceso de desarrollo de un programa|hyperpage}{8}
-\indexentry{Lo mas basico!Sintaxis|hyperpage}{10}
-\indexentry{Lo mas basico!Comentarios|hyperpage}{10}
-\indexentry{Lo mas basico!Datos primitivos|hyperpage}{11}
-\indexentry{Lo mas basico!Variables y constantes|hyperpage}{12}
-\indexentry{Lo mas basico!Lectura e Impresi\IeC {\'o}n|hyperpage}{12}
-\indexentry{Lo mas basico!Operadores|hyperpage}{15}
-\indexentry{Lo mas basico!Operadores!Operadores Aritm\IeC {\'e}ticos|hyperpage}{15}
-\indexentry{Lo mas basico!Operadores!Operadores de Asignaci\IeC {\'o}n|hyperpage}{15}
-\indexentry{Lo mas basico!Operadores!Operadores de Relaci\IeC {\'o}n|hyperpage}{16}
-\indexentry{Lo mas basico!Operadores!Operadores L\IeC {\'o}gicos|hyperpage}{16}
-\indexentry{Lo mas basico!Operadores!Operadores Relacionados con punteros|hyperpage}{16}
-\indexentry{Lo mas basico!Operadores!Operadores de Estructuras y Uniones|hyperpage}{16}
-\indexentry{Lo mas basico!Operadores!Operadores L\IeC {\'o}gicos de Bits|hyperpage}{16}
-\indexentry{Lo mas basico!Operadores!Miscel\IeC {\'a}neas|hyperpage}{16}
-\indexentry{Estructuras de Control|hyperpage}{16}
-\indexentry{Estructuras de Control!Sentencias de decisi\IeC {\'o}n|hyperpage}{16}
-\indexentry{Estructuras de Control!Sentencias de decisi\IeC {\'o}n!Sentencia if|hyperpage}{17}
-\indexentry{Estructuras de Control!Sentencias de decisi\IeC {\'o}n!Sentencia switch|hyperpage}{19}
-\indexentry{Estructuras de Control!Sentencias de decisi\IeC {\'o}n!Operador condicional ternario ?:|hyperpage}{20}
-\indexentry{Estructuras de Control!Sentencias de iteraci\IeC {\'o}n|hyperpage}{21}
-\indexentry{Estructuras de Control!Sentencias de iteraci\IeC {\'o}n!Sentencias For|hyperpage}{21}
-\indexentry{Estructuras de Control!Sentencias de iteraci\IeC {\'o}n!Sentencia While|hyperpage}{22}
-\indexentry{Estructuras de Control!Sentencias de iteraci\IeC {\'o}n!Sentencia Do - While|hyperpage}{23}
-\indexentry{Estructuras de Control!Sentencias Break y Continue|hyperpage}{24}
-\indexentry{Estructuras de Control!Sentencias de iteraci\IeC {\'o}n!Sentencias Break y Continue!Break|hyperpage}{24}
-\indexentry{Estructuras de Control!Sentencias de iteraci\IeC {\'o}n!Sentencias Break y Continue!Continue|hyperpage}{24}
-\indexentry{Estructuras de Control!Sentencias de iteraci\IeC {\'o}n!Sentencias Break y Continue!Uso de break y continue junto con while|hyperpage}{25}
-\indexentry{Introduccion|hyperpage}{29}
-\indexentry{Introduccion!\IeC {\textquestiondown }Qu\IeC {\'e} es la Programaci\IeC {\'o}n Modular?|hyperpage}{29}
-\indexentry{Modulos|hyperpage}{29}
-\indexentry{Modulos!Concepto de Modulo|hyperpage}{29}
-\indexentry{Modulos!Elementos de declaracion del Modulo|hyperpage}{29}
-\indexentry{Modulos!Ejemplos|hyperpage}{29}
-\indexentry{Recursividad|hyperpage}{30}
-\indexentry{Recursividad!Que es recursividad?|hyperpage}{30}
-\indexentry{Recursividad!Ejemplos|hyperpage}{30}
+\indexentry{Introducci\IeC {\'o}n|hyperpage}{7}
+\indexentry{Introducci\IeC {\'o}n!\IeC {\textquestiondown }Qu\IeC {\'e} es un Lenguaje de Programaci\IeC {\'o}n?|hyperpage}{7}
+\indexentry{Introducci\IeC {\'o}n!Historia de C++|hyperpage}{7}
+\indexentry{Introducci\IeC {\'o}n!\IeC {\textquestiondown }Qu\IeC {\'e} es C++?|hyperpage}{8}
+\indexentry{Introducci\IeC {\'o}n!Herramientas Necesarias|hyperpage}{8}
+\indexentry{Introducci\IeC {\'o}n!Consejos iniciales antes de programar|hyperpage}{9}
+\indexentry{Introducci\IeC {\'o}n!Ejemplos|hyperpage}{9}
+\indexentry{Lo mas basico|hyperpage}{10}
+\indexentry{Lo mas basico!Proceso de desarrollo de un programa|hyperpage}{10}
+\indexentry{Lo mas basico!Sintaxis|hyperpage}{12}
+\indexentry{Lo mas basico!Comentarios|hyperpage}{12}
+\indexentry{Lo mas basico!Datos primitivos|hyperpage}{13}
+\indexentry{Lo mas basico!Variables y constantes|hyperpage}{14}
+\indexentry{Lo mas basico!Lectura e Impresi\IeC {\'o}n|hyperpage}{14}
+\indexentry{Lo mas basico!Operadores|hyperpage}{17}
+\indexentry{Lo mas basico!Operadores!Operadores Aritm\IeC {\'e}ticos|hyperpage}{17}
+\indexentry{Lo mas basico!Operadores!Operadores de Asignaci\IeC {\'o}n|hyperpage}{17}
+\indexentry{Lo mas basico!Operadores!Operadores de Relaci\IeC {\'o}n|hyperpage}{18}
+\indexentry{Lo mas basico!Operadores!Operadores L\IeC {\'o}gicos|hyperpage}{18}
+\indexentry{Lo mas basico!Operadores!Operadores Relacionados con punteros|hyperpage}{18}
+\indexentry{Lo mas basico!Operadores!Operadores de Estructuras y Uniones|hyperpage}{18}
+\indexentry{Lo mas basico!Operadores!Operadores L\IeC {\'o}gicos de Bits|hyperpage}{18}
+\indexentry{Lo mas basico!Operadores!Miscel\IeC {\'a}neas|hyperpage}{18}
+\indexentry{Estructuras de Control|hyperpage}{18}
+\indexentry{Estructuras de Control!Sentencias de decisi\IeC {\'o}n|hyperpage}{19}
+\indexentry{Estructuras de Control!Sentencias de decisi\IeC {\'o}n!Sentencia if|hyperpage}{19}
+\indexentry{Estructuras de Control!Sentencias de decisi\IeC {\'o}n!Sentencia switch|hyperpage}{21}
+\indexentry{Estructuras de Control!Sentencias de decisi\IeC {\'o}n!Operador condicional ternario ?:|hyperpage}{22}
+\indexentry{Estructuras de Control!Sentencias de iteraci\IeC {\'o}n|hyperpage}{23}
+\indexentry{Estructuras de Control!Sentencias de iteraci\IeC {\'o}n!Sentencias For|hyperpage}{23}
+\indexentry{Estructuras de Control!Sentencias de iteraci\IeC {\'o}n!Sentencia While|hyperpage}{24}
+\indexentry{Estructuras de Control!Sentencias de iteraci\IeC {\'o}n!Sentencia Do - While|hyperpage}{25}
+\indexentry{Estructuras de Control!Sentencias Break y Continue|hyperpage}{26}
+\indexentry{Estructuras de Control!Sentencias de iteraci\IeC {\'o}n!Sentencias Break y Continue!Break|hyperpage}{26}
+\indexentry{Estructuras de Control!Sentencias de iteraci\IeC {\'o}n!Sentencias Break y Continue!Continue|hyperpage}{26}
+\indexentry{Estructuras de Control!Sentencias de iteraci\IeC {\'o}n!Sentencias Break y Continue!Uso de break y continue junto con while|hyperpage}{27}
+\indexentry{Introduccion|hyperpage}{31}
+\indexentry{Introduccion!\IeC {\textquestiondown }Qu\IeC {\'e} es la Programaci\IeC {\'o}n Modular?|hyperpage}{31}
+\indexentry{Modulos|hyperpage}{31}
+\indexentry{Modulos!Concepto de Modulo|hyperpage}{31}
+\indexentry{Modulos!Elementos de declaracion del Modulo|hyperpage}{31}
+\indexentry{Modulos!Ejemplos|hyperpage}{31}
+\indexentry{Recursividad|hyperpage}{32}
+\indexentry{Recursividad!Que es recursividad?|hyperpage}{32}
+\indexentry{Recursividad!Ejemplos|hyperpage}{32}
+\indexentry{Algoritmos de Ordenanmiento|hyperpage}{35}
+\indexentry{Algoritmos de Ordenamiento!Ordenamiento Rapido|hyperpage}{35}
+\indexentry{Algoritmos de Ordenamiento!Quicksort!Descripcion del Algoritmo|hyperpage}{35}
+\indexentry{Algoritmos de Ordenamiento!Quicksort!Codigo|hyperpage}{35}
+\indexentry{Algoritmos de Ordenamiento!Ordenamiento por mezcla|hyperpage}{36}
+\indexentry{Algoritmos de Ordenacion!Ordenamiento por mezcla!Descripcion del Algoritmo|hyperpage}{36}
+\indexentry{Algoritmos de Ordenacion!Ordenamiento por mezcla!Codigo en C++|hyperpage}{36}
+\indexentry{Algoritmos de Ordenacion!Ordenamiento por Monticulos|hyperpage}{37}
+\indexentry{Algoritmos de Ordenacion!Ordenamiento por Monticulos!Descripcion del Algortimo|hyperpage}{37}
+\indexentry{Algoritmos de Ordenacion!Ordenamiento por Cuentas|hyperpage}{38}
+\indexentry{Algoritmos de Ordenacion!Ordenamiento por Cuentas!Descripcion del Algoritmo|hyperpage}{38}
+\indexentry{Busqueda Binaria|hyperpage}{38}
+\indexentry{Busqueda Binaria!Descripcion del Algoritmo|hyperpage}{38}
+\indexentry{Busqueda Binaria!Ejemplo|hyperpage}{38}
