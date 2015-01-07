@@ -472,6 +472,121 @@ el programa, al ejecutarse, lo situe como el programador quiso
 \end{listing}
 
 
+\subsection{Operadores}\index{Lo mas basico!Operadores}
+
+El C++ está lleno de operadores. Presentamos aquí una tabla de los mismos indicando el rango de prioridad de cada uno, y cómo se ejecutan. A continuación comentaremos brevemente los operadores.
+
+\begin{center}
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Operadores (de mayor a menor prioridad)} & \textbf{Sentido} \\
+		\hline
+		( ) \{ \} & I-D \\
+		\hline
+		! ++ --  * \& & D-I \\
+		\hline
+		* / \% & I-D \\
+		\hline
+		+ - & I-D \\
+		\hline
+		<< >> & I-D \\
+		\hline
+		< <= > >= & I-D \\
+		\hline
+		== != & I-D \\
+		\hline
+		\& & I-D \\
+		\hline
+		\textasciicircum & I-D \\
+		\hline
+		| & I-D \\
+		\hline
+		\&\& (and) & I-D \\
+		\hline
+		|| (or) & I-D \\
+		\hline
+		?: (Operador Condicional Ternario) & I-D \\
+		\hline
+		= += -= *= /= \%= & D-I \\
+		\hline
+	\end{tabular}
+\end{center}
+
+La acción de estos operadores es la siguiente:
+
+\subsubsection{Operadores Aritméticos}\index{Lo mas basico!Operadores!Operadores Aritméticos}
+
+\begin{description}
+\item [+] Suma los valores situados a su derecha y a su izquierda.
+\item [-] Resta el valor de su derecha del valor de su izquierda.
+\item [-] Como operador unario, cambia el signo del valor  de su izquierda.
+\item [*] Multiplica el valor de su derecha por el valor de su izquierda.
+\item [/] Divide el valor situado a su izquierda por el valor situado a su dercha.
+\item [\%] Proporciona el resto de la división del valor de la izquierda por el valor de la derecha (sólo enteros).
+\item [++] Suma $1$ al valor de la variable situada a su izquierda (modo prefijo) o de la variable situada a su derecha (modo sufijo).
+\item [--] Igual que ++, pero restando $1$. 
+\end{description}
+
+\subsubsection{Operadores de Asignación}\index{Lo mas basico!Operadores!Operadores de Asignación}
+
+\begin{description}
+\item [=] Asigna el valor de su derecha a la variable de su izquierda.
+\end{description}
+
+Cada uno de los siguientes operadores actualiza la variable de su izquierda con el valor de su derecha utilizando la operación indicada. Usaremos de \textit{d} e \textit{i} para iquierda.
+
+\begin{description}
+\item [+=] Suma la cantidad \textit{d} a la variable \textit{i}.
+\item [-=] Resta la cantidad \textit{d} de la variable \textit{i}.
+\item [*=] Multiplica la variable \textit{i} por la variable \textit{d}.
+\item [/=] Divide la variable \textit{i} entre la cantidad \textit{d}.
+\item [\%=] Proporciona el resto de la división de la variable \textit{i}  por la cantidad \textit{d}
+\end{description}
+
+\textbf{Ejemplo}
+
+conejos *= 1.6; //es lo mismo que conejos = conejos * 1.6;
+
+\subsubsection{Operadores de Relación}\index{Lo mas basico!Operadores!Operadores de Relación}
+
+Cada uno de estos operadores compara el valor de su izquierda con el valor de su dercha. La expresión de relación formada por un operador y sus dos operandos toma el valor $1$ si la expresión es cierta, y el valor $0$ si es falsa.
+
+\begin{description}
+\item [<] menor que
+\item [<=] menor o igual que 
+\item [==] igual a
+\item [>=] mayor o igual que
+\item [>] mayor que 
+\item [!=] distinto de
+\end{description}
+
+\subsubsection{Operadores Lógicos}\index{Lo mas basico!Operadores!Operadores Lógicos}
+
+Los operadores lógicos utilizan normalmenteexpresiones de relación como operadores. El operador \textit{!} toma un operando situado a su derecha; el resto toma dos: uno a su derecha y otro a su izquierda.
+
+\begin{description}
+\item [\&\& and] La expresión combinada es cierta si ambos operandos lo son, y falsa en cualquier otro caso.
+\item [|| or] La expresión combinada es cierta si uno o ambos operandos lo son, y falsa en cualquier otro caso.
+\item [! not] La expresión es cierta si el operador es falso, y viceversa.
+\end{description}
+
+\subsubsection{Operadores Relacionados con punteros}\index{Lo mas basico!Operadores!Operadores Relacionados con punteros}
+
+\begin{description}
+\item [\& Operador de Dirección] Cuando va seguido por el nombre de una variable, entrega la dirección de dicha variable \textit{\&abc} es la dirección de la variable \textit{abc}.
+\item [* Operador de Indirección] Cuando va seguido por un puntero, entrega el valor almacenado en la dirección apuntada por él \textit{abc = 22; def = \&abc; val = *def} el efecto es asignar a \textit{val} el valor de 22.
+\end{description}
+
+\subsubsection{Operadores de Estructuras y Uniones}\index{Lo mas basico!Operadores!Operadores de Estructuras y Uniones}
+
+\subsubsection{Operadores Lógicos de Bits}\index{Lo mas basico!Operadores!Operadores Lógicos de Bits}
+\subsubsection{Misceláneas}\index{Lo mas basico!Operadores!Misceláneas}
+
+
+
+
+
+
 
 \section{Estructuras de Control}\index{Estructuras de Control}
 

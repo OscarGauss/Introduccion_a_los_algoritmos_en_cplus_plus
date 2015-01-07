@@ -33,45 +33,81 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.6}Lectura e Impresi\IeC {\'o}n}{12}{subsection.1.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Estructuras de Control}{15}{section.1.3}
+\contentsline {subsection}{\numberline {1.2.7}Operadores}{15}{subsection.1.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.1}Sentencias de decisi\IeC {\'o}n}{15}{subsection.1.3.1}
+\contentsline {subsubsection}{Operadores Aritm\IeC {\'e}ticos}{15}{section*.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.1.1}Sentencia if}{15}{subsubsection.1.3.1.1}
+\contentsline {subsubsection}{Operadores de Asignaci\IeC {\'o}n}{15}{section*.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.1.2}Sentencia switch}{17}{subsubsection.1.3.1.2}
+\contentsline {subsubsection}{Operadores de Relaci\IeC {\'o}n}{16}{section*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.1.3}Operador condicional ternario ?:}{18}{subsubsection.1.3.1.3}
+\contentsline {subsubsection}{Operadores L\IeC {\'o}gicos}{16}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.2}Sentencias de iteraci\IeC {\'o}n}{19}{subsection.1.3.2}
+\contentsline {subsubsection}{Operadores Relacionados con punteros}{16}{section*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.2.1}Sentencias For}{19}{subsubsection.1.3.2.1}
+\contentsline {subsubsection}{Operadores de Estructuras y Uniones}{16}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.2.2}Sentencia While}{21}{subsubsection.1.3.2.2}
+\contentsline {subsubsection}{Operadores L\IeC {\'o}gicos de Bits}{16}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.2.3}Sentencia Do - While}{21}{subsubsection.1.3.2.3}
+\contentsline {subsubsection}{Miscel\IeC {\'a}neas}{16}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.3}Sentencias Break y Continue}{22}{subsection.1.3.3}
+\contentsline {section}{\numberline {1.3}Estructuras de Control}{16}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.3.1}Break}{22}{subsubsection.1.3.3.1}
+\contentsline {subsection}{\numberline {1.3.1}Sentencias de decisi\IeC {\'o}n}{16}{subsection.1.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.3.2}Continue}{23}{subsubsection.1.3.3.2}
+\contentsline {subsubsection}{Sentencia if}{17}{section*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.3.3.3}Uso de break y continue junto con while}{23}{subsubsection.1.3.3.3}
+\contentsline {subsubsection}{Sentencia switch}{19}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Estructura de datos 1}{25}{chapter.2}
+\contentsline {subsubsection}{Operador condicional ternario ?:}{20}{section*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.2}Sentencias de iteraci\IeC {\'o}n}{21}{subsection.1.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Sentencias For}{21}{section*.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Sentencia While}{22}{section*.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Sentencia Do - While}{23}{section*.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.3}Sentencias Break y Continue}{24}{subsection.1.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Break}{24}{section*.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Continue}{24}{section*.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Uso de break y continue junto con while}{25}{section*.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Estructura de datos 1}{27}{chapter.2}
 \ttl@stoptoc {default@1}
 \ttl@starttoc {default@2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Programaci\IeC {\'o}n modular}{27}{chapter.3}
+\contentsline {chapter}{\numberline {3}Programaci\IeC {\'o}n modular}{29}{chapter.3}
 \ttl@stoptoc {default@2}
 \ttl@starttoc {default@3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {mycolor}Bibliography}}{29}{chapter*.2}
+\contentsline {section}{\numberline {3.1}Introduccion}{29}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Books}{29}{section*.3}
+\contentsline {subsection}{\numberline {3.1.1}\IeC {\textquestiondown }Qu\IeC {\'e} es la Programaci\IeC {\'o}n Modular?}{29}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Articles}{29}{section*.4}
+\contentsline {section}{\numberline {3.2}Modulos}{29}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {mycolor}Index}}{31}{section*.5}
+\contentsline {subsection}{\numberline {3.2.1}Concepto de Modulo}{29}{subsection.3.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.2}Elementos de declaracion del Modulo}{29}{subsection.3.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.3}Ejemplos}{29}{subsection.3.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Recursividad}{30}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.1}Que es recursvidad?}{30}{subsection.3.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.2}Ejemplos}{30}{subsection.3.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\leavevmode {\color {mycolor}Bibliography}}{33}{chapter*.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Books}{33}{section*.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Articles}{33}{section*.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\leavevmode {\color {mycolor}Index}}{35}{section*.22}
 \contentsfinish 
