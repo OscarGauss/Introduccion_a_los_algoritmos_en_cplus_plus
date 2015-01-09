@@ -20,7 +20,7 @@
 \BOOKMARK [3][-]{section*.5}{Operadores L\363gicos}{subsection.1.2.7}% 20
 \BOOKMARK [3][-]{section*.6}{Operadores Relacionados con punteros}{subsection.1.2.7}% 21
 \BOOKMARK [3][-]{section*.7}{Operadores de Estructuras y Uniones}{subsection.1.2.7}% 22
-\BOOKMARK [3][-]{section*.8}{Operadores L\363gicos de Bits}{subsection.1.2.7}% 23
+\BOOKMARK [3][-]{section*.8}{Operadores L\363gicos y de Desplazamiento de Bits}{subsection.1.2.7}% 23
 \BOOKMARK [3][-]{section*.9}{Miscel\341neas}{subsection.1.2.7}% 24
 \BOOKMARK [1][-]{section.1.3}{Estructuras de Control}{chapter.1}% 25
 \BOOKMARK [2][-]{subsection.1.3.1}{Sentencias de decisi\363n}{section.1.3}% 26
@@ -36,32 +36,34 @@
 \BOOKMARK [3][-]{section*.17}{Continue}{subsection.1.3.3}% 36
 \BOOKMARK [3][-]{section*.18}{Uso de break y continue junto con while}{subsection.1.3.3}% 37
 \BOOKMARK [0][-]{chapter.2}{Estructura de datos 1}{}% 38
-\BOOKMARK [0][-]{chapter.3}{Programaci\363n modular}{}% 39
-\BOOKMARK [1][-]{section.3.1}{Introduccion}{chapter.3}% 40
-\BOOKMARK [2][-]{subsection.3.1.1}{\277Qu\351 es la Programaci\363n Modular?}{section.3.1}% 41
-\BOOKMARK [1][-]{section.3.2}{Modulos}{chapter.3}% 42
-\BOOKMARK [2][-]{subsection.3.2.1}{Concepto de Modulo}{section.3.2}% 43
-\BOOKMARK [2][-]{subsection.3.2.2}{Elementos de declaracion del Modulo}{section.3.2}% 44
-\BOOKMARK [2][-]{subsection.3.2.3}{Ejemplos}{section.3.2}% 45
-\BOOKMARK [1][-]{section.3.3}{Recursividad}{chapter.3}% 46
-\BOOKMARK [2][-]{subsection.3.3.1}{Que es recursvidad?}{section.3.3}% 47
-\BOOKMARK [2][-]{subsection.3.3.2}{Ejemplos}{section.3.3}% 48
-\BOOKMARK [0][-]{chapter.4}{Algoritmos Basicos}{}% 49
-\BOOKMARK [1][-]{section.4.1}{Algoritmos de Ordenanmiento}{chapter.4}% 50
-\BOOKMARK [2][-]{subsection.4.1.1}{Ordenamiento Rapido}{section.4.1}% 51
-\BOOKMARK [3][-]{section*.19}{Descripcion del Algoritomo}{subsection.4.1.1}% 52
-\BOOKMARK [3][-]{section*.20}{Codigo en C++}{subsection.4.1.1}% 53
-\BOOKMARK [2][-]{subsection.4.1.2}{Ordenamiento por mezcla}{section.4.1}% 54
-\BOOKMARK [3][-]{section*.21}{Descripcion del Algoritomo}{subsection.4.1.2}% 55
-\BOOKMARK [3][-]{section*.22}{Codigo en C++}{subsection.4.1.2}% 56
-\BOOKMARK [2][-]{subsection.4.1.3}{Ordenamiento por Monticulos}{section.4.1}% 57
-\BOOKMARK [3][-]{section*.23}{Descripcion del Algoritmo}{subsection.4.1.3}% 58
-\BOOKMARK [2][-]{subsection.4.1.4}{Ordenamiento por Cuentas}{section.4.1}% 59
-\BOOKMARK [3][-]{section*.24}{Descripcion del Algortimo}{subsection.4.1.4}% 60
-\BOOKMARK [1][-]{section.4.2}{Busqueda Binaria}{chapter.4}% 61
-\BOOKMARK [2][-]{subsection.4.2.1}{Descripcion del Algoritmo}{section.4.2}% 62
-\BOOKMARK [2][-]{subsection.4.2.2}{Ejemplo}{section.4.2}% 63
-\BOOKMARK [0][-]{chapter*.25}{Bibliography}{}% 64
-\BOOKMARK [1][-]{section*.26}{Books}{chapter*.25}% 65
-\BOOKMARK [1][-]{section*.27}{Articles}{chapter*.25}% 66
-\BOOKMARK [0][-]{section*.28}{Index}{}% 67
+\BOOKMARK [1][-]{section.2.1}{\277Qu\351 es una estructura de datos?}{chapter.2}% 39
+\BOOKMARK [1][-]{section.2.2}{Estructuras est\341ticas }{chapter.2}% 40
+\BOOKMARK [0][-]{chapter.3}{Programaci\363n modular}{}% 41
+\BOOKMARK [1][-]{section.3.1}{Introduccion}{chapter.3}% 42
+\BOOKMARK [2][-]{subsection.3.1.1}{\277Qu\351 es la Programaci\363n Modular?}{section.3.1}% 43
+\BOOKMARK [1][-]{section.3.2}{Modulos}{chapter.3}% 44
+\BOOKMARK [2][-]{subsection.3.2.1}{Concepto de Modulo}{section.3.2}% 45
+\BOOKMARK [2][-]{subsection.3.2.2}{Elementos de declaracion del Modulo}{section.3.2}% 46
+\BOOKMARK [2][-]{subsection.3.2.3}{Ejemplos}{section.3.2}% 47
+\BOOKMARK [1][-]{section.3.3}{Recursividad}{chapter.3}% 48
+\BOOKMARK [2][-]{subsection.3.3.1}{Que es recursvidad?}{section.3.3}% 49
+\BOOKMARK [2][-]{subsection.3.3.2}{Ejemplos}{section.3.3}% 50
+\BOOKMARK [0][-]{chapter.4}{Algoritmos Basicos}{}% 51
+\BOOKMARK [1][-]{section.4.1}{Algoritmos de Ordenanmiento}{chapter.4}% 52
+\BOOKMARK [2][-]{subsection.4.1.1}{Ordenamiento Rapido}{section.4.1}% 53
+\BOOKMARK [3][-]{section*.19}{Descripcion del Algoritomo}{subsection.4.1.1}% 54
+\BOOKMARK [3][-]{section*.20}{Codigo en C++}{subsection.4.1.1}% 55
+\BOOKMARK [2][-]{subsection.4.1.2}{Ordenamiento por mezcla}{section.4.1}% 56
+\BOOKMARK [3][-]{section*.21}{Descripcion del Algoritomo}{subsection.4.1.2}% 57
+\BOOKMARK [3][-]{section*.22}{Codigo en C++}{subsection.4.1.2}% 58
+\BOOKMARK [2][-]{subsection.4.1.3}{Ordenamiento por Monticulos}{section.4.1}% 59
+\BOOKMARK [3][-]{section*.23}{Descripcion del Algoritmo}{subsection.4.1.3}% 60
+\BOOKMARK [2][-]{subsection.4.1.4}{Ordenamiento por Cuentas}{section.4.1}% 61
+\BOOKMARK [3][-]{section*.24}{Descripcion del Algortimo}{subsection.4.1.4}% 62
+\BOOKMARK [1][-]{section.4.2}{Busqueda Binaria}{chapter.4}% 63
+\BOOKMARK [2][-]{subsection.4.2.1}{Descripcion del Algoritmo}{section.4.2}% 64
+\BOOKMARK [2][-]{subsection.4.2.2}{Ejemplo}{section.4.2}% 65
+\BOOKMARK [0][-]{chapter*.25}{Bibliography}{}% 66
+\BOOKMARK [1][-]{section*.26}{Books}{chapter*.25}% 67
+\BOOKMARK [1][-]{section*.27}{Articles}{chapter*.25}% 68
+\BOOKMARK [0][-]{section*.28}{Index}{}% 69

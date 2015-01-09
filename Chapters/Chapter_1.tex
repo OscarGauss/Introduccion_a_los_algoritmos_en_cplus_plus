@@ -5,7 +5,7 @@
 %\chapterimage{chapter_head_1.pdf} % Chapter heading image
 
 \chapter{Introducción a la programación en c++}
-\renewcommand{\chaptername}{Lecture}
+
 \setlength{\parindent}{0pt}
 
 \section{Introducción}\index{Introducción}
@@ -516,32 +516,32 @@ La acción de estos operadores es la siguiente:
 
 \subsubsection{Operadores Aritméticos}\index{Lo mas basico!Operadores!Operadores Aritméticos}
 
-\begin{description}
-\item [+] Suma los valores situados a su derecha y a su izquierda.
-\item [-] Resta el valor de su derecha del valor de su izquierda.
-\item [-] Como operador unario, cambia el signo del valor  de su izquierda.
-\item [*] Multiplica el valor de su derecha por el valor de su izquierda.
-\item [/] Divide el valor situado a su izquierda por el valor situado a su dercha.
-\item [\%] Proporciona el resto de la división del valor de la izquierda por el valor de la derecha (sólo enteros).
-\item [++] Suma $1$ al valor de la variable situada a su izquierda (modo prefijo) o de la variable situada a su derecha (modo sufijo).
-\item [--] Igual que ++, pero restando $1$. 
-\end{description}
+\begin{tabular}{p{0.5cm}p{14cm}}
+\textbf{+} & Suma los valores situados a su derecha y a su izquierda.\\
+\textbf{-} & Resta el valor de su derecha del valor de su izquierda.\\
+\textbf{-} & Como operador unario, cambia el signo del valor  de su izquierda.\\
+\textbf{*} & Multiplica el valor de su derecha por el valor de su izquierda.\\
+\textbf{/} & Divide el valor situado a su izquierda por el valor situado a su dercha.\\
+\textbf{\%} & Proporciona el resto de la división del valor de la izquierda por el valor de la derecha (sólo enteros).\\
+\textbf{++} & Suma $1$ al valor de la variable situada a su izquierda (modo prefijo) o de la variable situada a su derecha (modo sufijo).\\
+\textbf{--} & Igual que ++, pero restando $1$.\\
+\end{tabular}
 
 \subsubsection{Operadores de Asignación}\index{Lo mas basico!Operadores!Operadores de Asignación}
 
-\begin{description}
-\item [=] Asigna el valor de su derecha a la variable de su izquierda.
-\end{description}
+\begin{tabular}{p{0.5cm}p{14cm}}
+\textbf{=} & Asigna el valor de su derecha a la variable de su izquierda.\\
+\end{tabular}
 
 Cada uno de los siguientes operadores actualiza la variable de su izquierda con el valor de su derecha utilizando la operación indicada. Usaremos de \textit{d} e \textit{i} para iquierda.
 
-\begin{description}
-\item [+=] Suma la cantidad \textit{d} a la variable \textit{i}.
-\item [-=] Resta la cantidad \textit{d} de la variable \textit{i}.
-\item [*=] Multiplica la variable \textit{i} por la variable \textit{d}.
-\item [/=] Divide la variable \textit{i} entre la cantidad \textit{d}.
-\item [\%=] Proporciona el resto de la división de la variable \textit{i}  por la cantidad \textit{d}
-\end{description}
+\begin{tabular}{p{0.5cm}p{14cm}}
+\textbf{+=} & Suma la cantidad \textit{d} a la variable \textit{i}.\\
+\textbf{-=} & Resta la cantidad \textit{d} de la variable \textit{i}.\\
+\textbf{*=} & Multiplica la variable \textit{i} por la variable \textit{d}.\\
+\textbf{/=} & Divide la variable \textit{i} entre la cantidad \textit{d}.\\
+\textbf{\%=} & Proporciona el resto de la división de la variable \textit{i}  por la cantidad \textit{d}\\
+\end{tabular}
 
 \textbf{Ejemplo}
 
@@ -551,37 +551,74 @@ conejos *= 1.6; //es lo mismo que conejos = conejos * 1.6;
 
 Cada uno de estos operadores compara el valor de su izquierda con el valor de su dercha. La expresión de relación formada por un operador y sus dos operandos toma el valor $1$ si la expresión es cierta, y el valor $0$ si es falsa.
 
-\begin{description}
-\item [<] menor que
-\item [<=] menor o igual que 
-\item [==] igual a
-\item [>=] mayor o igual que
-\item [>] mayor que 
-\item [!=] distinto de
-\end{description}
+\begin{tabular}{p{0.5cm}p{14cm}}
+\textbf{<} & menor que\\
+\textbf{<=} & menor o igual que\\
+\textbf{==} & igual a\\
+\textbf{>=} & mayor o igual que\\
+\textbf{>} & mayor que\\
+\textbf{!=} & distinto de\\
+\end{tabular}
 
 \subsubsection{Operadores Lógicos}\index{Lo mas basico!Operadores!Operadores Lógicos}
 
 Los operadores lógicos utilizan normalmenteexpresiones de relación como operadores. El operador \textit{!} toma un operando situado a su derecha; el resto toma dos: uno a su derecha y otro a su izquierda.
 
-\begin{description}
-\item [\&\& and] La expresión combinada es cierta si ambos operandos lo son, y falsa en cualquier otro caso.
-\item [|| or] La expresión combinada es cierta si uno o ambos operandos lo son, y falsa en cualquier otro caso.
-\item [! not] La expresión es cierta si el operador es falso, y viceversa.
-\end{description}
+\begin{tabular}{p{1.5cm}p{13cm}}
+\textbf{\&\& and} & La expresión combinada es cierta si ambos operandos lo son, y falsa en cualquier otro caso.\\
+\textbf{|| or} & La expresión combinada es cierta si uno o ambos operandos lo son, y falsa en cualquier otro caso.\\
+\textbf{!} & La expresión es cierta si el operador es falso, y viceversa.\\
+\end{tabular}
 
 \subsubsection{Operadores Relacionados con punteros}\index{Lo mas basico!Operadores!Operadores Relacionados con punteros}
 
-\begin{description}
-\item [\& Operador de Dirección] Cuando va seguido por el nombre de una variable, entrega la dirección de dicha variable \textit{\&abc} es la dirección de la variable \textit{abc}.
-\item [* Operador de Indirección] Cuando va seguido por un puntero, entrega el valor almacenado en la dirección apuntada por él \textit{abc = 22; def = \&abc; val = *def} el efecto es asignar a \textit{val} el valor de 22.
-\end{description}
+\begin{tabular}{p{4.5cm}p{10cm}}
+\textbf{\& Operador de Dirección} & Cuando va seguido por el nombre de una variable, entrega la dirección de dicha variable \textit{\&abc} es la dirección de la variable \textit{abc}.\\
+\textbf{* Operador de Indirección} & Cuando va seguido por un puntero, entrega el valor almacenado en la dirección apuntada por él
+
+\begin{lstlisting}[style=Cpp]
+abc = 22;
+def = &abc; // puntero a abc
+val = *def
+\end{lstlisting}
+El efecto neto es asignar a \textit{val} el valor 22\\
+\end{tabular}
 
 \subsubsection{Operadores de Estructuras y Uniones}\index{Lo mas basico!Operadores!Operadores de Estructuras y Uniones}
+\begin{tabular}{p{0.5cm}p{14cm}}
+\textbf{.} & 
+El operador de pertenencia (punto) se utiliza junto con el nombre de la estructura o unión, para especificar un miembro de las mismas. Si tenemos una estructura cuyo \textit{nombre} es nombre, y \textit{miembro} es un miembro especificado por el patrón de la estructura, \textbf{nombre.miembro} identifica dicho miembro de la estructura. El operador de pertenencia puede utilizarse de la misma forma en uniones. Ejemplo:
+\begin{lstlisting}[style=Cpp]
+struct{
+	int codigo;
+	float precio;
+}articulo;
+articulo.codigo = 1265;
+\end{lstlisting}
+Con esto se asigna un valor al miembro \textbf{codigo} de la estructura \textbf{articulo}.\\
+\textbf{->} & 
+El operador de pertenencia indirecto: se usa con un puntero estructura o unión para identificar un miembro de las mismas. Supongo que \textbf{ptrstr} es un puntero a una estructura que contiene un miembro especificado en el patrón de estructura con el nombre miembro. En este caso
+\begin{lstlisting}[style=Cpp]
+ptrstr -> miembro;
+\end{lstlisting}
+identifica al miembro correspondiente de la estrucura apuntada. El operador de pertenencia indirecto puede utilizarse de igual forma con uniones.
+\begin{lstlisting}[style=Cpp]
+struct{
+	int codigo;
+	float precio;
+}articulo, *ptrstr;
+ptrstr = &articulo;
+ptrstr->codigo = 3451;
+\end{lstlisting}
+De este modo se asigna un valor al miembro \textbf{codigo} de la estructura \textbf{articulo}. Las tres expresiones siguientes son equivalentes:
 
-El operador de pertenencia (punto) se utiliza junto con el nombre de la estructura o unión, para especificar un miembro de las mismas. Si tenemos una estructura cuyo \textit{nombre} es nombre, y \textit{miembro} es un miembro especificado por el patrón de la estructura, \textbf{nombre.miembro} identifica dicho miembro de la estructura. El operador de pertenencia puede utilizarse de la misma forma en uniones. Ejemplo
+\tab{ptrstr->codigo} \tab{articulo.codigo} \tab{(*ptrstr).codigo}
+\\
+\end{tabular}
 
-\subsubsection{Operadores Lógicos de Bits}\index{Lo mas basico!Operadores!Operadores Lógicos de Bits}
+
+\subsubsection{Operadores Lógicos y de Desplazamiento de Bits}\index{Lo mas basico!Operadores!Operadores Lógicos y de Desplazamiento de Bits}
+
 \subsubsection{Misceláneas}\index{Lo mas basico!Operadores!Misceláneas}
 
 
